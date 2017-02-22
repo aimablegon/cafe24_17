@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>contact.html</title>
+    <<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <link rel="stylesheet" href="/koita/mobile/lib/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/font/flaticon.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/css/common.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/koita/mobile/lib/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="/koita/mobile/lib/js/script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/koita/mobile/lib/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/font/flaticon.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/css/common.css" />
+    <style>
+      #contact ul,ol,li {margin: 0;padding: 0;list-style: none;}
+      #contact p{margin: 0;}
+      #contact .contact_wrap {text-align: center;}
+      #contact .contact_wrap .contact_block{display: inline-block; width: 270px;}
+      #contact .contact_wrap .cloud {background-color:#00a1e9; position: relative; width: 100%;padding:20px; text-align: center;border-radius:10px; margin-bottom: 15px;}
+      #contact .contact_wrap .cloud .cloud_point{position: absolute; display: block; left: 0;bottom: -49px; width: 150px;height: 50px;
+        background-image: url("/koita/mobile/lib/images/program/cloud_point.png"); background-repeat: no-repeat; background-repeat: no-repeat;}
+      #contact .contact_wrap .cloud .center_cloud {display: inline-block; color: #fff;}
+      #contact .contact_wrap .cloud .center_cloud strong{font-size: 14px;}
+      #contact .contact_wrap .cloud .center_cloud p {font-size: 11px;}
+      #contact .contact_box {width: 100%; border:1px #adadad solid; text-align: center; border-radius: 10px; margin-bottom: 20px;}
+      #contact .contact_box_ct {padding:30px 20px;display: inline-block; text-align: left; font-size: 13px; color:#666;}
+      #contact .contact_box_ct ul li{line-height: 20px;}
+      #contact i::before{vertical-align: middle; font-size: 13px;}
+      #contact .contact_wrap .logo_box{width: 100%; background-image: url("/koita/mobile/lib/images/program/koita_logo.png"); background-position: center; -webkit-background-size: 80%; background-size: 80%; background-repeat: no-repeat; background-repeat: no-repeat;}
+      #contact .contact_wrap .logo_box strong{visibility: hidden;}
+      #contact .contact_wrap .cloud .center_cloud.logo_box p {visibility: hidden;}
+    </style>
+
+
+</head>
+<body>
+
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/koita/mobile/html/main/main.html"><img src="/koita/mobile/lib/images/logo.jpg" alt=""></a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li class="dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">마이페이지 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">등록내역</a></li>
+                              <li><a href="/koita/mobile/html/mypage/apply_confirm.html">참가자현황</a></li>
+                              <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">행사안내 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/event_info/invitation.html">초청글</a></li>
+                              <li><a href="/koita/mobile/html/event_info/event_info.html">행사개요</a></li>
+                              <li><a href="/koita/mobile/html/event_info/location.html">위치 및 교통편</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">프로그램 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/program/2016_program.html">2016 Program</a></li>
+                              <li><a href="/koita/mobile/html/program/2016_speaker.html">2016 Speaker</a></li>
+                              <li><a href="/koita/mobile/html/program/koita2014.html">지난행사</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">참가등록 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/apply/apply_info.html">참가신청안내</a></li>
+                              <li><a href="/koita/mobile/html/apply/apply.html">참가신청</a></li>
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">참가신청확인</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                      <li><a href="/koita/mobile/html/notice/list.html?Board_id=notice_kor_2016">공지사항</a></li>
+                      <li class="list-line"><a href="/koita/mobile/html/contact/contact.html">연락처</a></li>
+                      <li><a href="/koita/mobile/html/login/doLogout.html" class="flaticon-sign-in-1">로그아웃</a></li>
+                      <li><a href="/koita/mobile/html/login/login.html" class="flaticon-sign-in">로그인</a></li>
+                  </ul>
+
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+<div class="container" id="contact">
+
+    <h2 class="headding"><span>연락처</span></h2>
+    <div class="contact_wrap">
+      <div class="contact_block">
+        <div class="cloud">
+          <div class="center_cloud">
+            <strong>KOITA Global Forum 2016 사무국</strong>
+            <p>Secretariat Office on KOITA Global Forum</p>
+          </div>
+          <div class="cloud_point">
+
+          </div>
+        </div>
+        <div class="contact_box">
+          <div class="contact_box_ct">
+            <ul>
+              <li>
+                <span>
+                  <i class="flaticon-phone-receiver"></i>
+                  <strong>TEL</strong> : 02 - 6959 - 3205
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-printer"></i>
+                  <strong>FAX</strong> : 02 -2236 -5587
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-web"></i>
+                  <strong>EMAIL</strong> : koitagf2016@dip.kr
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-web-2"></i>
+                  <strong>WEBSITE</strong> :  www.koitaglobal.org
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="contact_block">
+        <div class="cloud">
+          <div class="center_cloud logo_box">
+            <strong>한국산업기술진흥협회</strong>
+            <p>koera</p>
+          </div>
+          <div class="cloud_point">
+
+          </div>
+        </div>
+        <div class="contact_box">
+          <div class="contact_box_ct">
+            <ul>
+              <li>
+                <span>
+                  <i class="flaticon-phone-receiver"></i>
+                  <strong>TEL</strong> : 02 - 3460 - 9065
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-printer"></i>
+                  <strong>FAX</strong> : 02 -3460 - 9069
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-web"></i>
+                  <strong>EMAIL</strong> : showguy@koita.or.kr
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i class="flaticon-web-2"></i>
+                  <strong>WEBSITE</strong> :  www.koita.or.kr
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="address">
+            <ul class="row">
+                <li class="text-center">
+                    <div class="titler_img"><img src="/koita/mobile/lib/images/footer_title1.png" alt="KOITA Global Forum 2016 사무국"></div>
+                    <ul class="call-list row">
+                        <li class="col-xs-12">
+                            <i class="flaticon-phone-receiver col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>TEL:</span><a href="tel:0269593205" class="orange">02.6959.3205</a></span>
+                            </div>
+                        </li>
+                        <li class="col-xs-12" style="margin:0;">
+                            <i class="flaticon-web col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>EMAIL:</span><a href="mailto:koitagf2016@dip.kr" class="orange">koitagf2016@dip.kr</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- content end -->
+
+
+</body>
+</html>

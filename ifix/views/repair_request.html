@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="대한민국 원조 아이폰 수리 업체. 소니,블랙베리 수리전문점.유사업체주의">
+	<meta name="naver-site-verification" content="08f4d69573eb904b030363f99c9b81ef02425a9c"/>
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="아이픽스잇코리아">
+	<meta property="og:description" content="대한민국 원조 아이폰 수리 업체. 소니,블랙베리 수리전문점.유사업체주의">
+	<meta property="og:image" content="/ifix/public/images/logo.png">
+	<meta property="og:url" content="http://ifixitkor.com">
+	<title>아이픽스잇코리아</title>
+	<link href="/ifix/public/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<!--[if lte IE 7]>
+		<meta http-equiv="refresh" content="0;url='underIe8.html'" />
+	<![endif]-->
+	<script>
+
+	function getInternetExplorerVersion() {
+	         var rv = -1; // Return value assumes failure.
+	         if (navigator.appName == 'Microsoft Internet Explorer') {
+	              var ua = navigator.userAgent;
+	              var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+	              if (re.exec(ua) != null)
+	                  rv = parseFloat(RegExp.$1);
+	             }
+	         return rv;
+	}
+
+	if(getInternetExplorerVersion() <= 7 && getInternetExplorerVersion() >= 1) {
+		location.href = "underIe8.html";
+	}
+	</script>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,cyrillic" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="/ifix/public/css/preloader.css" rel="stylesheet">
+	<link href="/ifix/public/css/bootstrap.css" rel="stylesheet">
+	<link href="/ifix/public/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/ifix/public/css/animate.css" rel="stylesheet">
+	<link href="/ifix/public/css/revolution.css" rel="stylesheet">
+	<link href="/ifix/public/css/style.css" rel="stylesheet">
+
+	<style>
+		header.main{
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+		address{
+			margin: 20px 0 20px 10px
+		}
+		address p{
+			margin: 0
+		}
+	</style>
+
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader"></div>
+
+<!-- HEADER -->
+<header class="header header-light main">
+
+	<!-- NAVBAR -->
+	<nav class="navbar container">
+
+		<!-- NAVBAR BRAND -->
+		<a class="navbar-brand pull-left nav_logo" href="/ifix/views/home.html">
+			<img src="/ifix/public/images/logo.png" alt="I FIX it KOREA" >
+		</a>
+		<!-- /.navbar-brand -->
+
+
+
+		<button class="navbar-toggle pull-right" data-target="#navbar" data-toggle="collapse" type="button">
+			<i class="fa fa-bars"></i>
+		</button>
+
+		<!-- navbar-appication/notice -->
+		<div class="pull-right" style="margin:30px 0 15px">
+			<span class="nav_menu_a">
+				<a href="contact.html">수리문의</a>
+			</span>
+			<span class="nav_menu_a" style="padding-right:5px">
+				<a href="notice.html">공지사항</a>
+			</span>
+		</div>
+
+				<!-- NAVBAR COLLAPSE -->
+		<div id="navbar" class="navbar-collapse collapse pull-right" style="margin-bottom:10px">
+
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="home.html">메인</a>
+				</li>
+				<li>
+					<a href="intro.html">회사소개</a>
+				</li>
+				<li>
+					<a href="location.html">지점안내</a>
+				</li>
+				<li>
+					<a href="iphone.html">아이폰 수리비용</a>
+				</li>
+				<li>
+					<a href="sony.html">SONY,블랙베리 수리비용</a>
+				</li>
+				<li  class="active">
+					<a href="mainboard.html">메인보드 수리</a>
+				</li>
+				<li>
+					<a href="data.html">데이터복구</a>
+				</li>
+				<li class="nav_menu_b">
+					<a href="contact.html">수리문의</a>
+				</li>
+				<li class="nav_menu_b">
+					<a href="notice.html">공지사항</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+
+
+	</nav>
+	<!-- /.navbar -->
+
+</header>
+<!-- /.header -->
+
+<!-- WRAPPER -->
+<div class="wrapper" >
+<style>
+/*@media print{
+    #print_table table tbody th,
+    #print_table table tbody td{
+        border:1px solid #000;
+        font-size: 200px;
+    }
+}*/
+    table th{
+        text-align: center;
+        background-color: #fafafa;
+        vertical-align: middle !important;
+    }
+    label{
+        font-weight: normal;
+        margin-right:20px;
+    }
+    label input{
+        margin-right:5px !important;
+    }
+    /*.print_logo{outline: 1px #000 solid;
+        background: url('../../images/logo.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 200px;
+        height: 50px;
+    }*/
+
+    .hp1::after{
+        content:"-";
+        position:absolute;
+        top:10px;
+        right:15px;
+    }
+    .hp2::after{
+        content:"-";
+        position:absolute;
+        top:1px;
+        right:15px;
+    }
+    .appli_table_textbox{
+        width:100%;
+        overflow-y:scroll;
+        border:1px #AAA solid;
+        margin:10px auto;
+        padding:15px;
+    }
+    .request_span{
+        color:#F00 ;
+    }
+    .table-responsive > .table > tbody > tr >td >.table_label{
+        white-space: normal ;
+    }
+    .table_label label{
+        width: 193px;
+        vertical-align: top
+    }
+
+
+    @media screen and (max-width: 479px) {
+        .hp{
+            width:15%;
+            display:inline-block;
+        }
+    }
+
+
+</style>
+    <!-- PAGE TITLE -->
+    <header class="pagetitle pagetitle-sm">
+    	<div class="container">
+    		<div class="divtable irow">
+    			<div class="divcell">
+    				<i class="fa fa-file-o"></i>
+    				<h1>메인보드 수리</h1>
+    				<div class="divider"></div>
+    				<span class="subtitle">메인보드 수리 의뢰</span>
+    			</div>
+    			<div class="divcell text-right">
+    				<ol class="breadcrumb">
+    					<li><a href="#">홈</a></li>
+    					<li class="active">메인보드 수리</li>
+    				</ol>
+    			</div>
+    		</div>
+    	</div>
+    </header>
+    <!-- /.pagetitle -->
+
+    <!-- CONTENT -->
+
+    <div class="content">
+        <div class="container">
+            <!-- <div class="text-center">
+                <div class="heading-divider"></div>
+                <h3 class="text-center">수리 의뢰서</h3>
+            </div> -->
+            <!-- <hr class="hr-nobg"> -->
+            <!-- beforebegin --><form action="print.html" method="post" target="_blank"><!-- afterbegin -->
+                <fieldset id="print_page">
+                    <legend class="sr-only">복구의뢰신청</legend>
+                    <div id="print_table" class="table-responsive form-group">
+                        <div class="text-left print_logo"><img src="/ifix/public/images/logo.png" alt="" style="display:none;"></div>
+                        <div class="text-center">
+                            <div class="heading-divider"></div>
+                            <h3 class="text-center" style="margin-top:20px">수리 의뢰서</h3>
+                            <br>
+                        </div>
+
+        				<table class="table table-bordered" >
+                            <colgroup>
+                                <col width="20%">
+                                <col width="30%">
+                                <col width="20%">
+                                <col width="30%">
+                            </colgroup>
+        					<tbody>
+                                <tr>
+            						<th>의뢰지점</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="storeId">
+                                          	강남점
+                                        </span>
+                                    </td>
+            					<!-- </tr>
+                                <tr> -->
+            						<th>접수방법</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="way">
+                                            직접방문
+                                        </span>
+                                    </td>
+            					</tr>
+                                <tr>
+            						<th>고객명</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="name">
+                                            홍길동
+                                        </span>
+                                    </td>
+            					<!-- </tr>
+                                <tr> -->
+            						<th>연락처</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="{{body.phone}}" name="phone">
+                                            {{body.phone}}
+                                        </span>
+                                    </td>
+            					</tr>
+                                <tr>
+            						<th>휴대폰모델</th>
+            						<td style="padding-left:15px">
+            						    <span>
+                                            <input type="hidden" value="" name="modelName">
+                                            010-1234-5678
+                                        </span>
+            						</td>
+            					<!-- </tr>
+                                <tr> -->
+            						<th>일련번호</th>
+            						<td style="padding-left:15px">
+            						    <span>
+                                            <input type="hidden" value="" name="modelNumber">
+                                            123456789aaa
+                                        </span>
+            						</td>
+            					</tr>
+                                <tr>
+            						<th>핸드폰분류</th>
+                                    <td colspan="3" style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="phoneType">
+                                            핸드폰 타입
+                                        </span>
+                                        <span>
+                                            <input type="hidden" value="{" name="phoneMaker">
+                                            핸드폰 브랜드
+                                        </span>
+                                    </td>
+            					</tr>
+                                <tr>
+            						<th>긴급여부</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="urgent">
+                                            긴급
+                                        </span>
+                                    </td>
+            					<!-- </tr>
+                                <tr> -->
+            						<th>정상여부</th>
+            						<td style="padding-left:15px">
+                                        <span>
+                                            <input type="hidden" value="" name="nomal">
+                                            정상
+                                        </span>
+                                    </td>
+            					</tr>
+                                <tr>
+                                    <th>복구항목</th>
+                                    <td colspan="3">
+                                        <div class="table_label requires">
+                                            <label for="damage_1"><input type="checkbox" name="requirement[]" disabled value="전화번호부 200건 이하" id="damage_1">전화번호부 200건 이하</label>
+                                            <label for="damage_2"><input type="checkbox" name="requirement[]" disabled value="전화번호부 500건 이하" id="damage_2">전화번호부 500건 이하</label>
+                                            <label for="damage_3"><input type="checkbox" name="requirement[]" disabled value="전화번호부 500건 이하" id="damage_3">전화번호부 500건 이하</label>
+                                            <label for="damage_4"><input type="checkbox" name="requirement[]" disabled value="전화번호부 1000건 이상" id="damage_4">전화번호부 1000건 이상</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_5"><input type="checkbox" name="requirement[]" disabled value="사진(일반)" id="damage_5">사진(일반)</label>
+                                            <label for="damage_6"><input type="checkbox" name="requirement[]" disabled value="동영상(일반)" id="damage_6">동영상(일반)</label>
+                                            <label for="damage_7"><input type="checkbox" name="requirement[]" disabled value="일정(스케쥴)" id="damage_7">일정(스케쥴)</label>
+                                            <label for="damage_8"><input type="checkbox" name="requirement[]" disabled value="메모(Text)" id="damage_8">메모(Text)</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_9"><input type="checkbox" name="requirement[]" disabled value="S메모" id="damage_9">S메모</label>
+                                            <label for="damage_10"><input type="checkbox" name="requirement[]" disabled value="기타(HWP, PDF, XLS, PPT)" id="damage_10">기타(HWP, PDF, XLS, PPT)</label>
+                                            <label for="damage_11"><input type="checkbox" name="requirement[]" disabled value="문자메시지(분석)" id="damage_11">문자메시지(분석)</label>
+                                            <label for="damage_12"><input type="checkbox" name="requirement[]" disabled value="통화내역(분석)" id="damage_12">통화내역(분석)</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_13"><input type="checkbox" name="requirement[]" disabled value="카카오톡(분석)" id="damage_13">카카오톡(분석)</label>
+                                            <label for="damage_14"><input type="checkbox" name="requirement[]" disabled value="마이피플(분석)" id="damage_14">마이피플(분석)</label>
+                                            <label for="damage_15"><input type="checkbox" name="requirement[]" disabled value="네이버라인(분석)" id="damage_15">네이버라인(분석)</label>
+                                            <label for="damage_16"><input type="checkbox" name="requirement[]" disabled value="틱톡(분석)" id="damage_16">틱톡(분석)</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_17"><input type="checkbox" name="requirement[]" disabled value="네이트온(분석)" id="damage_17">네이트온(분석)</label>
+                                            <label for="damage_18"><input type="checkbox" name="requirement[]" disabled value="기타어플(분석)" id="damage_18">기타어플(분석)</label>
+                                            <label for="damage_19"><input type="checkbox" name="requirement[]" disabled value="음성(분석)" id="damage_19">음성(분석)</label>
+                                            <label for="damage_20"><input type="checkbox" name="requirement[]" disabled value="사진(문자첨부)" id="damage_20">사진(문자첨부)</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_21"><input type="checkbox" name="requirement[]" disabled value="사진(어플첨부)" id="damage_21">사진(어플첨부)</label>
+                                            <label for="damage_22"><input type="checkbox" name="requirement[]" disabled value="인터넷로그(분석)" id="damage_22">인터넷로그(분석)</label>
+                                            <label for="damage_23"><input type="checkbox" name="requirement[]" disabled value="기타(분석)" id="damage_23">기타(분석)</label>
+                                            <label for="damage_24"><input type="checkbox" name="requirement[]" disabled value="확인서" id="damage_24">확인서</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_25"><input type="checkbox" name="requirement[]" disabled value="감정서" id="damage_25">감정서</label>
+                                            <label for="damage_26"><input type="checkbox" name="requirement[]" disabled value="모바일포렌식" id="damage_26">모바일포렌식</label>
+                                            <label for="damage_27"><input type="checkbox" name="requirement[]" disabled value="프리미엄" id="damage_27">프리미엄</label>
+                                            <label for="damage_28"><input type="checkbox" name="requirement[]" disabled value="패키지A(전번+사진)" id="damage_28">패키지A(전번+사진)</label>
+                                        <!-- </div>
+                                        <div class="table_label"> -->
+                                            <label for="damage_29" style="width:210px"><input type="checkbox" name="requirement[]" disabled value="패키지B(전번+사진+동영상)" id="damage_29">패키지B(전번+사진+동영상)</label>
+                                            <input type="hidden" value="{{body.requirement}}" name="requirement">
+                                        </div>
+                                    </td>
+            					</tr>
+                                <tr>
+            						<th>요청사항(세부)</th>
+            						<td colspan="3" style="padding-left:15px">
+            						    <span class="table_label">최대한 빨리 해주세요</span>
+            						</td>
+            					</tr>
+                                <tr>
+            						<td colspan="4" style="padding:0px 3% 10px;">
+                                        <br>
+                                        <div class="text-left">
+                                            <span class=" request_span">&nbsp;▶ 휴대폰에 저장된 Data는 AS(업그레이드 포함) 중 유실 될 수 있으므로, 수리의회 전 별도 기록(백업) 보관 후 접수 해야 하며, 이에 대한 책임은 단말기사용자에게 있습니다.</span>
+                                            <br>
+                                            <span class=" request_span">&nbsp;▶ 의뢰 된 제품은 테스트 및 수리 과정 중 보호 필름 등이 손실 될 수 있으며, 센터에서는 손실에 대한 책임을 지지 않습니다.</span>
+                                        </div>
+                                        <br>
+                                        <!-- <div class="text-left"> -->
+                                            <span class="pull-left">&nbsp;위의 중요 안내 내용을 이해하였으며, 이에 동의 합니다.</span>
+                                        <!-- </div> -->
+                                        <br>
+                                        <div class="text-center" style="margin:20px 0 15px">
+                                            <span>2016</span><span>년&nbsp;&nbsp;</span><span>16</span><span>월&nbsp;&nbsp;</span><span>18</span><span>일</span>
+                                        </div>
+                                        <div class="text-right" style="margin:15px 0">
+                                            서명&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <br>
+                                    </td>
+            					</tr>
+        					</tbody>
+        				</table>
+        			</div>
+                    <div class="text-center print_button" style="margin-top:5px;">
+                        <!-- <input type="submit" class="btn btn-lg btn-primary" value="인쇄하기" onclick="pagePrint(document.getElementById('print_page'))"> -->
+                        <button type="submit" class="btn btn-lg btn-primary">인쇄하기</button>
+                    </div>
+                </fieldset>
+            <!-- beforeend --></form><!-- afterend -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+
+        var requi = '{{body.requirement}}'.split('|');
+
+        for(i=0;i<requi.length;i++){
+            for(j=0; j<$('.requires input').length; j++){
+
+                if($('.requires label').eq(j).find('input').attr('value') == requi[i]){
+                    var id = $('.requires label').eq(j).find('input').attr('id');
+                    var target = document.getElementById(id);
+                    target.checked=true;
+                }
+            }
+        }
+
+        // document.getElementById('mybutton').addEventListener('click', function(){
+        //     window.open('Upload.cfm', 'result', 'width=300,height=300');
+        //     document.getElementById('myform').submit();
+        // });
+    }
+
+    </script>
+
+  </div>
+  <!-- /.wrapper -->
+
+  <!-- FOOTER -->
+  <footer class="footer footer-dark">
+
+  		<!-- FOOTER EXTRA -->
+  	<div class="footer-extra">
+  		<div class="container">
+
+  			<a class="navbar-brand pull-left" href="/ifix/views/home.html"><img
+  			src="/ifix/public/images/blogo.png"
+  			alt="Mexico" style="width:280px;height:auto;"></a>
+  			<address class="pull-left">
+  				<p>
+  					<span>업체명 : 아이픽스잇코리아(드림텍)&nbsp;&nbsp;|&nbsp;&nbsp;대표자 : 백승봉 (Email : hpas2002@naver.com)</span>
+  				</p>
+  				<p>
+  					<span>사업자등록번호 : 214-05-75575&nbsp;&nbsp;</span>
+  					<span class="footer_divice">|</span>
+  					<span>&nbsp;&nbsp; 통신판매업신고번호 : 제2010-서울서초-0585호</span>
+  				</p>
+  				<p>
+  					<span>주소 : 서울특별시 서초구 서초동 1318-13 서초현대타워 803호 &nbsp;&nbsp;</span>
+  					<span class="footer_divice">|</span>
+  					<span>&nbsp;&nbsp;전화번호 : 070-4028-5234</span>
+  				</p>
+  				<p class="copyrights">
+  					&copy; Copyrights 2016 아이픽스잇코리아&nbsp;
+  				</p>
+  			</address>
+  			<br>
+
+  			<!-- <div class="divider pull-right"></div> -->
+  			<nav class="extra-menu pull-right">
+  				<a href="intro.html">회사소개</a>
+  				<a href="location.html">지점안내</a>
+  				<a href="notice.html">공지사항</a>
+  			</nav>
+
+  		</div>
+  	</div>
+  	<!-- /.footer-extra -->
+
+  </footer>
+
+  <!--<script src="/ifix/public/js/jquery-2.1.4.min.js"></script>-->
+  <script src="/ifix/public/js/bootstrap.min.js"></script>
+  <script src="/ifix/public/js/plugins.js"></script>
+  <script src="/ifix/public/js/fontawesome-markers.min.js"></script>
+  <script src="/ifix/public/js/custom.js"></script>
+
+
+  <script type="text/javascript">
+
+  $(function(){
+  	var filter = "win16|win32|win64|mac";
+
+  	if(navigator.platform){
+  		if(0 > filter.indexOf(navigator.platform.toLowerCase()) || getInternetExplorerVersion() == 8){
+  		// mobile
+  // 			$('.video_a').addClass('mobile_image_a').find('video').addClass('mobile_video');
+  // 			$('.video_b').addClass('mobile_image_b').find('video').addClass('mobile_video');
+  // 			$('#open_pop .popup_pc').css('display','none').find('.popup_mobile').css('display','block').parents('#open_pop').css('left',0);
+  			$('#open_pop .popup_pc').css('display','none').next().css('display','block');
+  			$('#open_pop .popup_pc').next().next().css('display','block');
+  			$('#open_pop').css('left',0);
+
+  			$("ul.banner_video").find("li").eq(0).css("background-image","url(/ifix/public/images/mobile_a.jpg)");
+  			$("ul.banner_video").find("li").eq(1).css("background-image","url(/ifix/public/images/mobile_b.jpg)");
+  		}else{
+  			// pc
+  			// $('.video_a').addClass('mobile_image_a').find('video').addClass('mobile_video');
+  			// $('.video_b').addClass('mobile_image_b').find('video').addClass('mobile_video');
+  			// $('#open_pop .popup_pc').css('display','none').next().css('display','block').parents('#open_pop').css('left',0)
+  		}
+  	}
+
+  })
+
+  </script>
+
+  	<!-- {%if isReal%}
+  	<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+  	<script type="text/javascript">
+  	if(!wcs_add) var wcs_add = {};
+  	wcs_add["wa"] = "ce9528f3b9dc20";
+  	wcs_do();
+  	</script> -->
+
+
+  		<!--  CPCGUARD SCRIPT V6.0 -->
+  		<!-- {%if deviceInfo.Mobile%}
+  			<script type="text/javascript">
+  				(function(){
+  				var _script = document.createElement("script"); _script.id= "include_cpc_script"; _script.type = "text/javascript"; _script.charset = "utf-8"; _script.async = true; _script.src = (document.location.protocol || "http:") + "//nsc1.cpcguard.com/mobile/cpc_script.js";
+  				 var _node = document.getElementsByTagName("script")[0]; _node.parentNode.insertBefore(_script, _node);
+  			  })();
+  			</script>
+  		{%else%}
+  			<script type="text/javascript">
+  				(function(){
+  				var _script = document.createElement("script"); _script.id= "include_cpc_script"; _script.type = "text/javascript"; _script.charset = "utf-8"; _script.async = true; _script.src = (document.location.protocol || "http:") + "//nsc1.cpcguard.com/new/cpc_script.js";
+  				 var _node = document.getElementsByTagName("script")[0]; _node.parentNode.insertBefore(_script, _node);
+  			  })();
+  			</script>
+  		{%endif%} -->
+      <!-- CPCGUARD SCRIPT END -->
+
+  	<!-- {%endif%} -->
+
+  <script type="text/javascript">
+      var roosevelt_params = {
+          retargeting_id:'oNPgJSEL8.m72rISWr_urQ00',
+          tag_label:'i5HV7ifuT_ilUrj76jyh1Q'
+      };
+  </script>
+  <script type="text/javascript" src="//adimg.daumcdn.net/rt/roosevelt.js" async></script>
+
+  </body>
+  </html>

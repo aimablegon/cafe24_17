@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Notice</title>
+        <link rel="stylesheet" href="twice_font/font/flaticon.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin-ext);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @font-face {
+          font-family: 'Nanum Gothic';
+          font-style: normal;
+          font-weight: 400;
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+        }
+        @font-face {
+          font-family: 'Nanum Gothic';
+          font-style: normal;
+          font-weight: 700;
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
+        }
+        @font-face {
+          font-family: 'Nanum Gothic';
+          font-style: normal;
+          font-weight: 800;
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+          src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
+               url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');
+        }
+
+            *{margin:0; padding:0;}
+            html,body{height:100%;}
+            body{
+                font-family: "맑은고딕", "Malgun Gothic", Tahoma, Geneva, sans-serif;
+                font-size: 12px;
+                line-height: 1.6;
+                color: #0a0502;
+            }
+            ul,ol{list-style:none;}
+            a{text-decoration: none;}
+            /*.wrapper{
+                height:100%;
+            }*/
+
+            /*header*/
+            .wrapper .header{
+                height:100px; background-color:rgba(255,255,255,0.7);
+                position:absolute; width:100%; left:0; top:0; padding:0 20px; box-sizing:border-box;
+                box-shadow:0 1px 15px #AAA;
+            }
+            .wrapper .header .mark{
+                float:left;
+            }
+
+            .wrapper .header .nav{
+                float:right;
+            }
+
+            .wrapper .header .mark a{
+                display:block; width:104px; height:55px; padding:25px;
+                background-image:url(images/twice_logo.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                transition:1s;
+            }
+            .wrapper .header .mark a:hover{
+                transform:rotateY(180deg);
+            }
+
+
+            .wrapper .header .nav button{
+                display:none;
+            }
+            .wrapper .header .nav ul{
+                font-size:0; z-index:10;
+            }
+            .wrapper .header .nav li{
+                display:inline-block; font-size:16px;
+                vertical-align:top; line-height:100px;
+                font-family: 'Oswald', sans-serif;
+
+            }
+            .wrapper .header .nav li a{
+                padding:0 10px; display:block; transition:0.3s; color:#08e9d1;
+                text-decoration:none; font-size:1.1em;
+                font-family: 'Oswald', sans-serif;
+            }
+             .wrapper .header .nav li a:hover{
+                border-top:4px #ffb0b0 solid; color:#ffb0b0;
+            }
+            /*header 끝*/
+
+
+
+            /*content*/
+
+            #content{
+                width:100%; margin-top:100px; padding:0 0 50px; position:relative;}
+            .notice{
+                height:60px; margin:0 auto; padding:20px 0;
+                background-color: #f4f4f4;
+                background-image: url(images/notice.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+
+
+            .contents{max-width:1000px;width:85%; padding:50px 0px; margin:0 auto; position:relative; }
+            .contents .contents_notice{
+                padding-bottom:60px;
+            }
+
+            .contents .contents_notice .notice_title{
+                border-top: 2px solid #d4d3d3;
+                border-bottom: 1px solid #d4d3d3;
+                background: #f8f5f2;
+                font-family: 'Nanum Gothic',monospace;
+                font-size: 0;
+            }
+            .contents .contents_notice .notice_title .list_num, .list_text{
+                display: inline-block;;
+            }
+            .contents .contents_notice .notice_title .list_date{
+                float: right;
+                display: block;
+            }
+            .contents .contents_notice .notice_title .list_num{
+                width: 2%;
+                padding: 9px 1.5% 0;
+                font-size: 12px;
+                text-align: center;
+            }
+            .contents .contents_notice .notice_title h3{
+                padding: 12px 5px 10px;
+                margin: 0;
+                font-size: 13px;
+                line-height: 20px;
+                color: #05abf6;
+                width:auto;
+            }
+
+            .contents .contents_notice .notice_img{
+                height: 100%;
+                width: 100%;
+
+            }
+
+
+
+
+
+            .contents .contents_notice .notice_title .list_date{
+                width: 10%;
+                padding: 13px 1% 0 0;
+                font-size: 11px;
+                text-align:center;
+            }
+
+            .contents .notice_content .notice_img img{
+                height: 100%;
+                width: 100%;
+                max-width: 676px;
+                max-height: 493px;
+            }
+            .contents .contents_notice .notice_content{
+                padding:30px;
+            }
+            .contents .wrap .notice_list{
+                width: 100%;
+                border-top: 2px solid #d4d3d3;
+            }
+            .contents .notice_list .list_ul li{
+                padding: 11px 0 9px;
+                color: #848280;
+                border-bottom: 1px solid #d4d3d3;
+                background: #fcfcfc;
+                font-family: 'Nanum Gothic',monospace;
+                font-size: 0;
+            }
+
+            .contents .notice_list .list_ul .list_num{
+                width: 40px;
+                padding: 0 0 0 30px;
+                display: inline-block;
+                font-size: 11px;
+            }
+            .contents .notice_list .list_ul .list_date{
+                float: right;
+                width: 10%;
+                font-size: 11px;
+                color: #999;
+                padding-right: 3%;
+            }
+            .contents .notice_list .list_ul a{
+                color: #1e1e1e;
+                word-break: break-all;
+                display: inline-block;
+            }
+            .contents .notice_list .list_ul .p_default{
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 1.6;
+            }
+            .p_bleu, .p_red, .p_default, .p_underline{
+                font-weight: bold;
+            }
+            .p_blue{color:blue;}
+            .p_red{color:red;}
+            .p_underline{text-decoration: underline;}
+
+            .contents .wrap .notice_content p{
+                margin:20px 0;
+                line-height: 1.6em;
+            }
+            .contents .wrap .notice_content .p_1{
+                margin-top:0;
+            }
+
+            .contents .wrap .notice_content .p_3{
+                margin:40px 0;
+            }
+            .contents .list_button{
+                text-align:center;
+                padding-top: 15px;
+            }
+            .contents .list_button a{
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                margin: 0;
+                padding: 0 2px;
+            }
+            .contents .list_button a img{
+                width:100%;
+            }
+            /*content 끝*/
+
+
+            /*footer*/
+            .footer_1{width:100%; height:57px; position:fixed; left:0; bottom:0;}
+            .footer_2{width:100%; height:57px; padding:0 30px; box-sizing:border-box;  -webkit-box-sizing:border-box;  -moz-box-sizing:border-box;-o-box-sizing:border-box;}
+
+            .footer_left{width:115px; height:45px; float:left; position:relative; left:5%; margin:6px 0;}
+            .jyp_logo>img{width:100%;}
+
+
+            .footer_right{width: 210px;; height:33px; float:right; position:relative; margin:13px 0 14px;}
+            .SNS{
+                width:32px; height:33px; margin-right:5px; text-decoration:none; display:inline-block;
+                font-size: 20px;    color: #000;    background-color: #e4e4e4;    border-radius: 25%;
+            }
+            .insta{
+                background-image:url(images/insta.png);
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+            .twitter{
+                background-image:url(images/twitter_bird.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .facebook{
+                background-image:url(images/facebook.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .youtube{
+                background-image:url(images/youtube.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .cafe{
+                background-image:url(images/fans.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+
+            /*footer 끝*/
+
+
+            @media screen and (max-width:786px){
+
+                /*header*/
+                .wrapper .header{
+                    height:55px; padding:0; background-color:#FFF;
+                }
+                .wrapper .header .mark a{
+                     padding:0; height:55px;
+                    transform:scale(0.7, 0.7)
+                }
+                .wrapper .header .mark a:hover{
+
+                    transform:scale(0.7, 0.7) rotateY(180deg);
+                }
+                .wrapper .header .nav button{
+                    display:block; width:180px; padding:16px 40px; border:0;
+                    color:#FFF; background-color:#08e9d1;
+                    text-decoration:none; font-size:15px; font-family: 'Oswald', sans-serif;
+                    cursor:pointer;
+                }
+                /*임시 시작*/
+                /*.wrapper .header .nav button:hover + ul{*/
+                /*    display:block;*/
+                /*}*/
+                /*임시끝*/
+
+                .wrapper .header .nav ul{
+                    display:none; position:absolute; background-color:rgba(255, 255, 255, 0.8);
+                }
+                .wrapper .header .nav ul li{
+                    line-height:55px; text-indent:16px; padding-right:10px; width:100%;
+                }
+                 .wrapper .header .nav li a:hover{
+                    border-left:4px #08e9d1 solid; color:#ffb0b0;
+                    border-top:0;
+                 }
+                /*header 끝*/
+
+
+
+
+                /*content 시작*/
+
+                #content{margin-top:55px;}
+                .notice{
+                    transition:1s;
+                    -webkit-background-size:230px; background-size:230px;
+                }
+
+                .contents .contents_notice .notice_title h3{
+                    padding: 12px 5px 10px;
+                    margin: 0;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #05abf6;
+                    width:auto;
+                }
+
+                .contents .contents_notice .notice_title .list_date{
+                    width: 10%;
+                    padding: 13px 3% 0 0;
+                    font-size: 11px;
+                    text-align:center;
+                }
+
+
+
+
+                /*content end*/
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:57px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .SNS{
+                     background: #CCC;   color:#000;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                 /*footer end*/
+
+             }
+
+
+            @media screen and (max-width:600px){
+                .contents .contents_notice .notice_title .list_date{
+                    display: none;
+                }
+                .contents .notice_list .list_ul .list_date{
+                    display: none;
+                }
+            }
+            @media screen and (max-width:500px){
+                .contents .contents_notice .notice_title .list_num{
+                    display: none;
+                }
+                .contents .notice_list .list_ul .list_num{
+                    width:auto;
+                    padding:0;
+                    display: inline-block;
+                    float:left;
+                }
+                .contents .notice_list .list_ul a{
+                    width:90%;
+                    display: inline-block;
+                    padding-left: 5%;
+
+                }
+                .contents .notice_list .list_ul .p_default{
+                    width:100%;
+
+                }
+                .contents .contents_notice .notice_title .list_text{
+                    width: 95%;
+                    padding: 12px 1.5% 12px 3.5%;
+                    font-size: 15px;
+                }
+                .contents .notice_list .list_ul li{
+                    padding: 11px 20px;
+                }
+            }
+            @media screen and (max-width:479px){
+                /*header start*/
+                .wrapper .header{
+                    height:40px;
+                }
+                .wrapper .header .nav button{
+                    height:40px;
+                    padding:10px 40px;
+                    width:150px;
+                }
+
+                 .wrapper .header .nav ul li {
+                    line-height: 37px;
+                    text-indent: 6px;
+                    padding-right: 10px;
+                    font-size:14px;
+                }
+               .wrapper .logo{
+                    position:relative; margin:0 auto; top:10%;
+                    transform:scale(1, 1);
+                    width: 250px;
+                    height: 250px;
+                    background-size: 70%;
+                    transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    background-repeat:no-repeat;
+                    background-position: center;
+                }
+                .wrapper .header .mark a{
+                    width: 60px;
+                    height: 30px;
+                    padding: 0;
+                    background-position: center;
+                    background-size: cover;
+                    margin: 3px 0 0 10px;
+                    transform:scale(1 , 1);
+                }
+                 .wrapper .header .mark a:hover{
+                    transform:scale(1, 1) rotateY(180deg);
+                }
+                /*header end*/
+                /*content start*/
+                #content {
+                    margin-top: 40px;
+                }
+                .notice {
+                    height: 50px;
+                    padding:0;
+                    background-size: 45%;
+                }
+
+
+
+
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:37px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .footer_right {
+                    width: 138px;
+                    height: 33px;
+                    float: right;
+                    position: relative;
+                    right:0;
+                    margin: 9px 0 14px;
+                }
+                .SNS{
+                     width:23px; height:23px; margin-right:0px; text-decoration:none; display:inline-block;
+                     font-size: 14px;    color: #000;    background: #FFF;    border-radius: 25%;
+                     background: #CCC;   color:#000;
+                     background-size:95%;
+                     background-repeat:no-repeat;
+                     background-position:center;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                }
+                .footer_left{
+                    width: 67px;
+                    height: 45px;
+                    float: left;
+                    position: relative;
+                    left: 0%;
+                    margin: 8px 0;
+
+                }
+            }
+
+
+
+        </style>
+
+
+
+
+        <script>
+            $(function(){
+                $('.nav>button').click(function(){
+                    $(this).next('ul').slideToggle(1000)
+                })
+
+                $(window).resize(function(){
+                    if($(this).width() < 768){
+                        $('.nav ul').css('display','none');
+                    }else if($(this).width()>767){
+                        $('.nav ul').css('display','block')
+                    }
+                })
+
+
+                var on ="images/button-on.png";
+                var off ="images/button-off.png";
+                $('.list_button a').click(function(){
+
+                    var idx = $(this).index();
+                    console.log(idx)
+
+                    $(this).addClass('on').children('img').attr('src',on).parent('a').siblings().removeClass('on').children('img').attr('src',off);
+
+                    $('.video_list ul').eq(idx).css({'display':"block"}).siblings().css({"display":"none"});
+
+                    return false
+                })
+
+                $('.list_button a').mouseenter(function(){
+                     $(this).children('img').attr('src',on)
+
+                }).mouseleave(function(){
+                    $(this).not('.on').children('img').attr('src',off)
+                })
+
+            })
+
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <div class="header">
+                <div class="mark">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="discography.html">DISCOGRAPHY</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="video.html">VIDEO</a>
+                        </li>
+                        <li>
+                            <a href="notice.html">NOTICE</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html">SCHEDULE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div id="content">
+                <div class="notice"></div>
+
+                <div class="contents">
+                    <div class="contents_wrap">
+                        <div class="wrap">
+                            <div class="contents_notice">
+                                <div class="notice_title">
+                                    <span class="list_num">29</span>
+                                    <h3 class="list_text">
+                                        <span>
+                                            TWICE 2nd mini Album  &lt;PAGE TWO&gt; SPECIAL EVENT 2 안내
+                                        </span>
+                                    </h3>
+                                    <span class="list_date">2016.06.27</span>
+                                </div>
+                                <div class="notice_content">
+                                    <p class="p_1">
+                                        안녕하세요. JYPE 입니다.
+                                    </p>
+
+                                    <p class="p_2">
+                                        TWICE 2nd mini Album &lt;PAGE TWO&gt; SPECIAL EVENT 2 안내 입니다.
+                                    </p>
+
+                                    <p class="p_3">
+                                        <strong class="p_default">날짜 :</strong> 2016년 7월 3일 일요일
+                                        <strong class="p_blue">오후 8시</strong>
+                                        <br />
+
+                                        <strong class="p_default">장소 :</strong>
+                                        <span class="p_red"> 우리금융아트홀?(송파구 올림픽로 424 올림픽공원)</span>
+                                        <br />
+
+                                        <strong class="p_default">티켓 :</strong> 이벤트 당일, 입장시에
+                                        <span class="p_underline">‘포토카드21종+렌티큘러9종’</span>과
+                                        <strong class="p_default">교환</strong> 후 배부
+                                        <br />
+
+                                        <strong class="p_default">번호표 배부 :</strong>
+                                        <strong class="p_blue">Fan’s 사전 신청</strong>
+                                        <br />
+
+                                        <strong class="p_default">티켓 교환 시간 :</strong>
+                                        <span class="p_red">7월 3일 (일) 오후 4시 ~</span>
+                                        <br />
+
+                                        *인기가요 출연으로 인하여 팬미팅 시작 시간이 변경되었습니다. 원스분들의 양해부탁드립니다.
+                                        <br />
+
+                                        <strong class="p_default">Fan’s 사전 신청
+                                            <br /> -신청 기간 : 2016년
+
+                                        </strong>
+                                        <span class="p_red">6월 29일 (수) 오후 8시 </span>
+                                        <strong class="p_default"> ~ 6월 30일 (목) 오후 8시
+                                            <br />
+                                            -신청 방법 : 팬즈 내 [포카 1순위 신청] 게시판의 '신청' 버튼 클릭
+                                        </strong>
+                                    </p>
+
+                                    <p class="p_4">
+                                        <strong class="p_default">&lt; 티켓 안내 &gt;</strong>
+                                        <br />
+
+                                        FAN’S에서 사전 신청하신 번호의 순서대로 배부해드립니다.
+                                        <br />
+
+                                        <span class="p_underline">티켓 교환시간까지 도착하지 않으신 경우에는 신청하신 순서가 무효 처리되며,가장 뒷번호를 배부해 드립니다.</span>
+                                        <br />
+
+                                        입장 티켓 교환 시간까지 도착하신 분들의 입장 티켓 교환 후, 모임 시간까지 도착하지 않으신 분들의 티켓 교환을 사전신청 순서대로 추가 배부해드릴 예정입니다.
+                                        <br />
+
+                                        <span class="p_underline">티켓 번호순대로 입장 예정 입니다. (좌석 선착순)</span>
+                                        <br />
+
+                                        티켓은 1인당 1매까지 교환 가능합니다.
+                                        <br/>
+
+                                        <strong class="p_default">포토카드는 수거 후 행사가 끝난 뒤</strong>돌려드릴 예정입니다.
+                                        <br />
+
+                                        포토카드는 빠른 확인을 위하여 나연1,2 -정연1,2 - 모모1,2 - 사나1,2 - 지효1,2 - 미나1,2 - 다현1,2 - 채영1,2 - 쯔위1,2 - 유닛 1,2,3 - 렌티큘러 (나연,정연,모모,사나,지효,미나,다현,채영,쯔위) 순으로 준비 부탁 드립니다.
+                                        <br />
+
+                                        티켓 분실시에는 재발권 및 공연장 입장이 불가하오니 티켓 보관에 유의하시기 바랍니다.
+                                        <br />
+
+                                        ( 티켓 분실, 파손 등 어떠한 경우에도 재발권 및 입장이 불가 )
+                                    </p>
+
+                                    <p class="p_5">
+                                        <strong class="p_default">< 입장 및 관람 안내 ></strong>
+                                    </p>
+
+                                    <p class="p_6">
+                                        공연 시작 1시간 전부터 입장이 진행될 예정입니다. 원활한 진행을 위해 공연 시작 10분 전까지 입장을 완료해 주시기 바랍니다.
+                                        <br />
+
+                                        1인 1티켓 소지를 원칙으로 입장 합니다. 입장하신 이후 잠시 자리를 비우실 경우에는 반드시 티켓을 소지하여 주시기 바랍니다. 티켓 미소지자는 재 입장이 절대 불가합니다.
+                                        <br />
+
+                                        화환 신청과 공연장 내 현수막 게시 신청은 별도로 받지 않습니다.
+                                        <br />
+
+                                        병, 폭죽, 레이저 등의 위험 물질과 음식물 반입을 삼가 주시기 바랍니다.
+                                        <br />
+
+                                        다른 관객 분들의 관람에 지장을 주는 행동은 삼가 주시기 바라며, 관람에 지나친 피해가 될 경우 진행요원의 제재를 받으실 수 있습니다.
+                                        <br />
+
+                                        물품 보관소는 운영하지 않으니 가급적 짐은 가볍게 하시고 참여해 주시기 바랍니다. 공연장 내 분실물에 대한 책임은 본인에게 있습니다.
+                                        <br />
+
+                                        상기 주의사항 및 진행요원의 지시 불응으로 인한 사고에 대해서 주최 측은 책임지지 않습니다.
+                                        <br />
+
+                                        즐거운 공연 관람을 위해 원스분들의 적극적인 협조를 부탁 드립니다.
+                                    </p>
+
+                                    <p class="p_7">
+                                        <strong class="p_default">< 입장 및 관람 안내 ></strong>
+                                    </p>
+
+                                    <p class="p_8">
+                                        주차 공간을 따로 제공해드리지 않사오니, 대중교통을 이용해주시기 바랍니다.
+                                        <br />
+
+                                        지하철 :
+                                    </p>
+
+                                    <div class="notice_img">
+                                        <img src="images/map.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notice_list">
+                                <div class="list">
+                                    <ul class="list_ul">
+                                        <li class="list_li">
+                                            <span class="list_num">29</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE 2nd mini Album &lt;PAGE TWO&gt; SPECIAL EVENT 2 안내</span>
+                                            </a>
+                                            <span class="list_date">2016.06.27</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">28</span>
+                                            <a href="#">
+                                                <span class="p_default">2016 JYP NATION CONCERT Ticket Open Notice</span>
+                                            </a>
+                                            <span class="list_date">2016.06.22</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">27</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE 2nd Mini Album ‘PAGE TWO’ 포토카드 이벤트 안내</span>
+                                            </a>
+                                            <span class="list_date">2016.06.18</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">26</span>
+                                            <a href="#">
+                                                <span class="p_default">Happy Birthday TZUYU ♥</span>
+                                            </a>
+                                            <span class="list_date">2016.06.14</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">25</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE CHEER UP PLAY</span>
+                                            </a>
+                                            <span class="list_date">2016.06.07</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">24</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE 블랙리스트 심화 기준 추가 안내 (160530)</span>
+                                            </a>
+                                            <span class="list_date">2016.05.30</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">23</span>
+                                            <a href="#">
+                                                <span class="p_default">Happy Birthday DAHYUN ♥</span>
+                                            </a>
+                                            <span class="list_date">2016.05.28</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">22</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE PAGE TWO 공개 방송 Special Event 안내</span>
+                                            </a>
+                                            <span class="list_date">2016.05.02</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">21</span>
+                                            <a href="#">
+                                                <span class="p_default">TWICE(트와이스) "CHEER UP " 공식 응원법</span>
+                                            </a>
+                                            <span class="list_date">2016.04.29</span>
+                                        </li>
+
+                                        <li class="list_li">
+                                            <span class="list_num">20</span>
+                                            <a href="#">
+                                                <span class="p_default">Happy Birthday CHAEYOUNG ♥</span>
+                                            </a>
+                                            <span class="list_date">2016.04.23</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="list_button">
+                                    <a href="">
+                                        <img src="images/button-on.png" alt=""></img>
+                                    </a>
+                                    <a href="">
+                                        <img src="images/button-off.png" alt=""></img>
+                                    </a>
+                                    <a href="">
+                                        <img src="images/button-off.png" alt=""></img>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="footer_1">
+                <div class="footer_2">
+                    <span class="footer_left">
+                        <a href="http://www.jype.com/" class="jyp_logo">
+                            <img src="images/jyplogo-b.png" alt="제이와이피엔터테이먼트로고" />
+                        </a>
+                    </span>
+
+                    <span class="footer_right">
+                        <a href="https://www.instagram.com/twicetagram/" class="SNS insta">
+                        </a>
+                        <a href="https://twitter.com/JYPETWICE" class="SNS twitter">
+                        </a>
+                        <a href="https://www.facebook.com/JYPETWICE" class="SNS facebook">
+                        </a>
+                        <a href="https://www.youtube.com/c/jypentertainment" class="SNS youtube">
+                        </a>
+                        <a href="http://fans.jype.com/Portal" class="SNS cafe">
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

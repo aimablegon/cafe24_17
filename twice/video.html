@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Video</title>
+        <link rel="stylesheet" href="twice_font/font/flaticon.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin-ext);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+            *{margin:0; padding:0;}
+            html{height:100%;}
+            ul,ol{list-style:none;}
+            a{text-decoration:none;}
+            .wrapper{
+                height:100%;
+            }
+
+            /*header*/
+            .wrapper .header{
+                height:100px; background-color:rgba(255,255,255,0.7);
+                position:absolute; width:100%; left:0; top:0; padding:0 20px; box-sizing:border-box;
+                box-shadow:0 1px 15px #AAA;
+            }
+            .wrapper .header .mark{
+                float:left;
+            }
+
+            .wrapper .header .nav{
+                float:right;
+            }
+
+            .wrapper .header .mark a{
+                display:block; width:104px; height:55px; padding:25px;
+                background-image:url(images/twice_logo.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                transition:1s;
+            }
+            .wrapper .header .mark a:hover{
+                transform:rotateY(180deg);
+            }
+
+
+            .wrapper .header .nav button{
+                display:none;
+            }
+            .wrapper .header .nav ul{
+                font-size:0; z-index:10;
+            }
+            .wrapper .header .nav li{
+                display:inline-block; font-size:16px;
+                vertical-align:top; line-height:100px;
+                font-family: 'Oswald', sans-serif;
+
+            }
+            .wrapper .header .nav li a{
+                padding:0 10px; display:block; transition:0.3s; color:#08e9d1;
+                text-decoration:none; font-size:1.1em;
+                font-family: 'Oswald', sans-serif;
+            }
+             .wrapper .header .nav li a:hover{
+                border-top:4px #ffb0b0 solid; color:#ffb0b0;
+            }
+            /*header 끝*/
+
+
+
+            /*content*/
+
+            #content{
+                width:100%; height:100%; margin-top:100px; padding:0 0 50px; position:relative;}
+            .video{
+                height:60px; margin:0 auto; padding:20px 0;
+                background-color: #f4f4f4;
+                background-image: url(images/video.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+
+            .contents{
+                padding: 50px 0;
+                width: 100%;
+                background-color: #FFF;
+                font-family: 'Nanum Gothic',monospace;
+                color: #3F3F3F;
+            }
+            .contents .main_video{
+                margin:0 auto;
+                width: 760px;
+                height: 480px;
+            }
+            .contents .main_video iframe{
+                width:100%;
+                height:100%;
+            }
+
+            .contents .video_list{
+                min-width: 80%;
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 40px 0 10px 0;
+            }
+            .contents .video_list ul{
+                display:block;
+                text-align:center;
+                list-style: none outside none;
+
+            }
+            .contents .video_list ul li{
+                display:inline-block;
+                max-width:200px;
+                margin:0 10px;
+            }
+            .contents .video_list ul li a{
+
+                display:block;
+                text-align:center;
+            }
+            .contents .video_list ul li a img{
+                width:100%;
+            }
+            .contents .video_list ul li span{
+                display:block;
+                text-align:center;
+                font-size: 12px;
+                line-height: 17px;
+            }
+            .contents .video_list .list_b{
+                display:none;
+            }
+
+            .contents .list_button{
+                text-align:center;
+            }
+            .contents .list_button a{
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                margin: 0;
+                padding: 0 2px;
+            }
+            .contents .list_button a img{
+                width:100%;
+            }
+            /*content 끝*/
+
+
+            /*footer*/
+            .footer_1{width:100%; height:57px; position:fixed; left:0; bottom:0;}
+            .footer_2{width:100%; height:57px; padding:0 30px; box-sizing:border-box;  -webkit-box-sizing:border-box;  -moz-box-sizing:border-box;-o-box-sizing:border-box;}
+
+            .footer_left{width:115px; height:45px; float:left; position:relative; margin:6px 0;}
+            .jyp_logo>img{width:100%;}
+
+
+            .footer_right{width: 210px;; height:33px; float:right; position:relative; right:5%; margin:13px 0 14px;}
+            .SNS{
+                width:32px; height:33px; margin-right:5px; text-decoration:none; display:inline-block;
+                font-size: 20px;    color: #000;   background-color: #e4e4e4;    border-radius: 25%;
+            }
+            .insta{
+                background-image:url(images/insta.png);
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+            .twitter{
+                background-image:url(images/twitter_bird.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .facebook{
+                background-image:url(images/facebook.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .youtube{
+                background-image:url(images/youtube.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .cafe{
+                background-image:url(images/fans.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+
+            /*footer 끝*/
+
+
+            @media screen and (max-width:786px){
+                body{height: auto}
+                /*header*/
+                .wrapper .header{
+                    height:55px; padding:0; background-color:#FFF;
+                }
+                .wrapper .header .mark a{
+                     padding:0; height:55px;
+                    transform:scale(0.7, 0.7)
+                }
+                .wrapper .header .mark a:hover{
+
+                    transform:scale(0.7, 0.7) rotateY(180deg);
+                }
+                .wrapper .header .nav button{
+                    display:block; width:180px; padding:16px 40px; border:0;
+                    color:#FFF; background-color:#08e9d1;
+                    text-decoration:none; font-size:15px; font-family: 'Oswald', sans-serif;
+                    cursor:pointer;
+                }
+                /*임시 시작*/
+                /*.wrapper .header .nav button:hover + ul{*/
+                /*    display:block;*/
+                /*}*/
+                /*임시끝*/
+
+                .wrapper .header .nav ul{
+                    display:none; position:absolute; background-color:rgba(255, 255, 255, 0.8);
+                }
+                .wrapper .header .nav ul li{
+                    line-height:55px; text-indent:16px; padding-right:10px; width:100%;
+                }
+                 .wrapper .header .nav li a:hover{
+                    border-left:4px #08e9d1 solid; color:#ffb0b0;
+                    border-top:0;
+                 }
+                /*header 끝*/
+
+
+
+
+                /*content 시작*/
+
+               #content{margin-top:55px;}
+                .video{
+                    transition:1s;
+                    -webkit-background-size:230px; background-size:230px;
+                }
+                .contents{
+                    padding: 10px 0;
+                }
+                .contents .main_video{
+                    margin:0 auto;
+                    width: 80%;
+                    height: 360px;
+                }
+                .contents .video_list ul li{
+                    max-width:140px;
+                }
+
+
+
+                /*content end*/
+
+
+
+
+
+
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:57px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .SNS{
+                     background: #CCC;   color:#000;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                 /*footer end*/
+
+             }
+              @media screen and (max-width:479px){
+                /*header start*/
+                .wrapper .header{
+                    height:40px;
+                }
+                .wrapper .header .nav button{
+                    height:40px;
+                    padding:10px 40px;
+                    width:150px;
+                }
+
+                 .wrapper .header .nav ul li {
+                    line-height: 37px;
+                    text-indent: 6px;
+                    padding-right: 10px;
+                    font-size:14px;
+                }
+               .wrapper .logo{
+                    position:relative; margin:0 auto; top:10%;
+                    transform:scale(1, 1);
+                    width: 250px;
+                    height: 250px;
+                    background-size: 70%;
+                    transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    background-repeat:no-repeat;
+                    background-position: center;
+                }
+                .wrapper .header .mark a{
+                    width: 60px;
+                    height: 30px;
+                    padding: 0;
+                    background-position: center;
+                    background-size: cover;
+                    margin: 3px 0 0 10px;
+                    transform:scale(1 , 1);
+                }
+                 .wrapper .header .mark a:hover{
+                    transform:scale(1, 1) rotateY(180deg);
+                }
+                /*header end*/
+                /*content start*/
+                #content {
+                    margin-top: 40px;
+                }
+                .video {
+                    height: 50px;
+                    padding:0;
+                    background-size: 45%;
+                }
+                .contents{
+                    padding: 30px 0 60px 0;
+                }
+                .contents .main_video{
+                    height: 240px;
+                }
+                .contents .video_list ul li{
+                    max-width: 90px;
+                    display: inline-block;
+                    margin: 0 2px;
+                }
+
+
+
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:37px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .footer_right {
+                    width: 138px;
+                    height: 33px;
+                    float: right;
+                    position: relative;
+                    right:0;
+                    margin: 9px 0 14px;
+                }
+                .SNS{
+                     width:23px; height:23px; margin-right:0px; text-decoration:none; display:inline-block;
+                     font-size: 14px;    color: #000;    background: #FFF;    border-radius: 25%;
+                     background: #CCC;   color:#000;
+                     background-size:95%;
+                     background-repeat:no-repeat;
+                     background-position:center;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                }
+                .footer_left{
+                    width: 67px;
+                    height: 45px;
+                    float: left;
+                    position: relative;
+                    left: 0%;
+                    margin: 8px 0;
+
+                }
+            }
+
+
+
+        </style>
+
+
+
+
+        <script>
+            $(function(){
+                $('.nav>button').click(function(){
+                    $(this).next('ul').slideToggle(1000)
+                })
+
+                $(window).resize(function(){
+                    if($(this).width() < 768){
+                        $('.nav ul').css('display','none');
+                    }else if($(this).width()>767){
+                        $('.nav ul').css('display','block')
+                    }
+                })
+
+                $('.video_list li a').click(function(){
+                    var url= $(this).attr('href');
+                    var location = '//www.youtube.com/embed/'+url+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" class="view" allowfullscreen' ;
+                    //www.youtube.com/embed/c7rCyll5AeY"frameborder="0" allowfullscreen
+                    $('.main_video iframe').attr('src',location);
+
+                    // console.log('bb')
+                    return false;
+                })
+
+                var on ="images/button-on.png";
+                var off ="images/button-off.png";
+                $('.list_button a').click(function(){
+
+                    var idx = $(this).index();
+                    console.log(idx)
+
+                    $(this).addClass('on').children('img').attr('src',on).parent('a').siblings().removeClass('on').children('img').attr('src',off);
+
+                    $('.video_list ul').eq(idx).css({'display':"block"}).siblings().css({"display":"none"});
+
+                    return false
+                })
+
+                $('.list_button a').mouseenter(function(){
+                     $(this).children('img').attr('src',on)
+
+                }).mouseleave(function(){
+                    $(this).not('.on').children('img').attr('src',off)
+                })
+
+            })
+
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <div class="header">
+                <div class="mark">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="discography.html">DISCOGRAPHY</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="video.html">VIDEO</a>
+                        </li>
+                        <li>
+                            <a href="notice.html">NOTICE</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html">SCHEDULE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div id="content">
+                <div class="video"></div>
+
+                <div class="contents">
+                    <div class="main_video">
+                        <iframe title="video" width="640" height="360" src="//www.youtube.com/embed/c7rCyll5AeY"frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video_list">
+                        <ul class="list_a">
+                            <li>
+                                <a href="c7rCyll5AeY">
+                                    <img src="images/cheer_1.jpg" alt="">
+                                </a>
+                                <span>TWICE(트와이스) "CH... </span>
+                                <span>2016.04.25</span>
+                            </li>
+                            <li>
+                                <a href="xe9UVM4yfhE">
+                                    <img src="images/cheer_2.jpg" alt="">
+                                </a>
+                                <span>TWICE(트와이스) "CH... </span>
+                                <span>2016.05.24</span>
+                            </li>
+                            <li>
+                                <a href="Id9GlwBk49Y">
+                                    <img src="images/cheer_3.jpg" alt="">
+                                </a>
+                                <span>TWICE(트와이스) "CH... </span>
+                                <span>2016.05.23</span>
+                            </li>
+                        </ul>
+                        <ul class="list_b">
+                            <li>
+                                <a href="0rtV5esQT6I">
+                                    <img src="images/ooh_1.jpg" alt="">
+                                </a>
+                                <span>TWICE "OOH-AHH하... </span>
+                                <span>2015.10.20</span>
+                            </li>
+                            <li>
+                                <a href="35Cy3Tf62tk">
+                                    <img src="images/ooh_2.jpg" alt="">
+                                </a>
+                                <span>TWICE "OOH-AHH하... </span>
+                                <span>2015.10.15</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list_button">
+                        <a href="">
+                            <img src="images/button-on.png" alt=""></img>
+                        </a>
+                        <a href="">
+                            <img src="images/button-off.png" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="footer_1">
+                <div class="footer_2">
+                    <span class="footer_left">
+                        <a href="http://www.jype.com/" class="jyp_logo">
+                            <img src="images/jyplogo-b.png" alt="제이와이피엔터테이먼트로고" />
+                        </a>
+                    </span>
+
+                    <span class="footer_right">
+                        <a href="https://www.instagram.com/twicetagram/" class="SNS insta">
+                        </a>
+                        <a href="https://twitter.com/JYPETWICE" class="SNS twitter">
+                        </a>
+                        <a href="https://www.facebook.com/JYPETWICE" class="SNS facebook">
+                        </a>
+                        <a href="https://www.youtube.com/c/jypentertainment" class="SNS youtube">
+                        </a>
+                        <a href="http://fans.jype.com/Portal" class="SNS cafe">
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

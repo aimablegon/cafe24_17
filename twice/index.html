@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Twice</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="twice_font/font/flaticon.css" type="text/css" />
+        <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin-ext);
+
+            *{margin:0; padding:0;}
+            html,body{height:100%;}
+            ul,ol{list-style:none;}
+            .wrapper{
+                height:100%; position:relative;
+                background-image:url(images/twice.jpg);background-repeat:no-repeat;
+                background-size:cover; -webkit-background-size: cover;
+                background-position:center top;}
+
+            .wrapper .logo{
+                width:350px; height:350px;
+                background-image:url(images/twice_mainlogo.png);
+                position:absolute; top:28%;
+                transform:scale(0.9, 0.9); transition:1.5s;}
+
+            .wrapper .logo:hover{
+                transform:scale(1.2, 1.2); opacity:0;
+            }
+
+            .wrapper .header{
+                height:100px; background-color:rgba(255,255,255,0.7);
+                position:fixed; width:100%; left:0; top:0; padding:0 20px; box-sizing:border-box;
+                box-shadow:0 1px 15px #AAA; z-index:1;
+            }
+            .wrapper .header .mark{
+                float:left;
+            }
+
+            .wrapper .header .nav{
+                float:right;
+            }
+
+            .wrapper .header .mark a{
+                display:block; width:104px; height:55px; padding:25px;
+                background-image:url(images/twice_logo.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                transition:1s;
+            }
+            .wrapper .header .mark a:hover{
+                transform:rotateY(180deg);
+            }
+
+
+            .wrapper .header .nav button{
+                display:none;
+            }
+            .wrapper .header .nav ul{
+                font-size:0; z-index:10;
+            }
+            .wrapper .header .nav li{
+                display:inline-block; font-size:16px;
+                vertical-align:top; line-height:100px;
+                font-family: 'Oswald', sans-serif;
+
+            }
+            .wrapper .header .nav li a{
+                padding:0 10px; display:block; transition:0.3s; color:#08e9d1;
+                text-decoration:none; font-size:1.1em;
+                font-family: 'Oswald', sans-serif;
+            }
+             .wrapper .header .nav li a:hover{
+                border-top:4px #ffb0b0 solid; color:#ffb0b0;
+            }
+
+
+
+
+            /*footer*/
+            .footer_1{width:100%; height:57px; position:fixed; left:0; bottom:0;}
+            .footer_2{width:100%; height:57px; padding:0 30px; box-sizing:border-box;  -webkit-box-sizing:border-box;  -moz-box-sizing:border-box;-o-box-sizing:border-box;}
+
+            .footer_left{width:115px; height:45px; float:left; position:relative; left:5%; margin:6px 0;}
+            .jyp_logo>img{width:100%;}
+
+
+            .footer_right{width: 210px;; height:33px; float:right; position:relative; margin:13px 0 14px;}
+            .SNS{
+                width:32px; height:33px; margin-right:5px; text-decoration:none; display:inline-block;
+                font-size: 20px;    color: #000;   background-color: #e4e4e4;    border-radius: 25%;
+            }
+            .insta{
+                background-image:url(images/insta.png);
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+            .twitter{
+                background-image:url(images/twitter_bird.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .facebook{
+                background-image:url(images/facebook.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .youtube{
+                background-image:url(images/youtube.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .cafe{
+                background-image:url(images/fans.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+
+
+
+            @media screen and (max-width:786px){
+                .wrapper{
+                    background-image:url(images/twice-720.jpg);
+                    background-position:center center;
+                }
+                .wrapper .logo{
+                    position:relative; margin:0 auto; top:10%;
+                    transform:scale(0.8, 0.8);
+                }
+
+                .wrapper .header{
+                    height:55px; padding:0; background-color:#FFF;
+                }
+                .wrapper .header .mark a{
+                     padding:0; height:55px;
+                    transform:scale(0.7, 0.7);
+                }
+                .wrapper .header .mark a:hover{
+
+                    transform:scale(0.7, 0.7) rotateY(180deg);
+                }
+
+
+                .wrapper .header .nav button{
+                    display:block; width:180px; padding:16px 40px; border:0;
+                    color:#FFF; background-color:#08e9d1;
+                    text-decoration:none; font-size:15px; font-family: 'Oswald', sans-serif;
+                    cursor:pointer;
+                }
+                /*임시 시작*/
+                /*.wrapper .header .nav button:hover + ul{*/
+                /*    display:block;*/
+                /*}*/
+
+                /*임시끝*/
+
+                .wrapper .header .nav ul{
+                    display:none; position:absolute; background-color:rgba(255, 255, 255, 0.8); z-index:1;
+                }
+                .wrapper .header .nav ul li{
+                    line-height:55px; text-indent:16px; padding-right:10px; width:100%;
+                }
+
+                 .wrapper .header .nav li a:hover{
+                    border-left:4px #08e9d1 solid; color:#ffb0b0;
+                    border-top:0; background-color:#FFF;
+                }
+
+                .footer_1{
+                    width:100%;
+                    height:57px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .SNS{
+                     background: #CCC;   color:#000;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+             }
+
+             @media screen and (max-width:479px){
+                .wrapper .header{
+                    height:40px;
+                }
+                .wrapper .header .nav button{
+                    height:40px;
+                    padding:10px 40px;
+                    width: 150px;
+                }
+                .wrapper .header .nav ul li {
+                    line-height: 37px;
+                    text-indent: 6px;
+                    padding-right: 10px;
+                    font-size:14px;
+                }
+               .wrapper .logo{
+                    position:relative; margin:0 auto; top:10%;
+                    transform:scale(1, 1);
+                    width: 250px;
+                    height: 250px;
+                    background-size: 70%;
+                    transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    background-repeat:no-repeat;
+                    background-position: center;
+                }
+                .wrapper .header .mark a{
+                    width: 60px;
+                    height: 30px;
+                    padding: 0;
+                    background-position: center;
+                    background-size: cover;
+                    margin: 3px 0 0 10px;
+                    transform:scale(1 , 1);
+                }
+                 .wrapper .header .mark a:hover{
+                    transform:scale(1, 1) rotateY(180deg);
+                }
+                .footer_1{
+                    width:100%;
+                    height:37px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .footer_right {
+                    width: 138px;
+                    height: 33px;
+                    float: right;
+                    position: relative;
+                    right:0;
+                    margin: 9px 0 14px;
+                }
+                .SNS{
+                     width:23px; height:23px; margin-right:0; text-decoration:none; display:inline-block;
+                     font-size: 14px;    color: #000;    background: #FFF;    border-radius: 25%;
+                     background: #CCC;   color:#000;
+                     background-size:95%;
+                     background-repeat:no-repeat;
+                     background-position:center;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                }
+                .footer_left{
+                    width: 67px;
+                    height: 45px;
+                    float: left;
+                    position: relative;
+                    left: 0%;
+                    margin: 8px 0;}
+            }
+
+
+
+
+        </style>
+
+
+
+        <script>
+            $(function(){
+                $('.nav>button').click(function(){
+                    $(this).next('ul').slideToggle(1000)
+                })
+
+                $(window).resize(function(){
+                    if($(this).width() < 768){
+                        $('.nav ul').css('display','none');
+                    }else if($(this).width()>767){
+                        $('.nav ul').css('display','block')
+                    }
+                })
+
+
+            })
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="mark">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="discography.html">DISCOGRAPHY</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="video.html">VIDEO</a>
+                        </li>
+                        <li>
+                            <a href="notice.html">NOTICE</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html">SCHEDULE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class=logo></div>
+
+            <div class="footer_1">
+                <div class="footer_2">
+                    <span class="footer_left">
+                        <a href="http://www.jype.com/" class="jyp_logo">
+                            <img src="images/jyplogo-b.png" alt="제이와이피엔터테이먼트로고" />
+                        </a>
+                    </span>
+
+                    <span class="footer_right">
+                        <a href="https://www.instagram.com/twicetagram/" class="SNS insta">
+                        </a>
+                        <a href="https://twitter.com/JYPETWICE" class="SNS twitter">
+                        </a>
+                        <a href="https://www.facebook.com/JYPETWICE" class="SNS facebook">
+                        </a>
+                        <a href="https://www.youtube.com/c/jypentertainment" class="SNS youtube">
+                        </a>
+                        <a href="http://fans.jype.com/Portal" class="SNS cafe">
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </body>
+</html>

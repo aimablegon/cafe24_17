@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Schedule</title>
+        <link rel="stylesheet" href="twice_font/font/flaticon.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin-ext);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+            *{margin:0; padding:0;}
+            html,body{height:100%;}
+            ul,ol{list-style:none;}
+            .wrapper{
+                height:100%;
+            }
+
+            /*header*/
+            .wrapper .header{
+                height:100px; background-color:rgba(255,255,255,0.7);
+                position:absolute; width:100%; left:0; top:0; padding:0 20px; box-sizing:border-box;
+                box-shadow:0 1px 15px #AAA;
+            }
+            .wrapper .header .mark{
+                float:left;
+            }
+
+            .wrapper .header .nav{
+                float:right;
+            }
+
+            .wrapper .header .mark a{
+                display:block; width:104px; height:55px; padding:25px;
+                background-image:url(images/twice_logo.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                transition:1s;
+            }
+            .wrapper .header .mark a:hover{
+                transform:rotateY(180deg);
+            }
+
+
+            .wrapper .header .nav button{
+                display:none;
+            }
+            .wrapper .header .nav ul{
+                font-size:0; z-index:10;
+            }
+            .wrapper .header .nav li{
+                display:inline-block; font-size:16px;
+                vertical-align:top; line-height:100px;
+                font-family: 'Oswald', sans-serif;
+
+            }
+            .wrapper .header .nav li a{
+                padding:0 10px; display:block; transition:0.3s; color:#08e9d1;
+                text-decoration:none; font-size:1.1em;
+                font-family: 'Oswald', sans-serif;
+            }
+             .wrapper .header .nav li a:hover{
+                border-top:4px #ffb0b0 solid; color:#ffb0b0;
+            }
+            /*header 끝*/
+
+
+
+            /*content*/
+
+            #content{
+                width:100%; height:100%; margin-top:100px; padding:0 0 50px; position:relative;}
+            .schedule{
+                height:60px; margin:0 auto; padding:20px 0;
+                background-color: #f4f4f4;
+                background-image: url(images/schedule.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+
+            .contents{max-width:1000px;width:85%; padding:50px 0px; margin:0 auto; position:relative; }
+            .sche_wrap{
+                width: 100%;
+                margin: 0 auto;
+            }
+            .yearMonth{
+                position: relative;
+                height: 40px;
+                background-color: #f8f5f2;
+            }
+            .yearMonth h3{
+                text-align: center;
+                font-family: 'Maven Pro', sans-serif;
+                letter-spacing: 1px;
+                color: #4a4a49;
+                padding: 12px 0 10px 0;
+                margin: 0;
+                font-size: 13px;
+            }
+            .yearMonth .pm {
+                top: 13px;
+                left: 20px;
+            }
+            .yearMonth .nm {
+                top: 13px;
+                right: 20px;
+            }
+            .yearMonth .btn {
+                display: block;
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                line-height: 15px;
+            }
+            .yearMonth a{
+                cursor:pointer;
+            }
+            .cal_sche{
+                width:90%;
+                margin: 0 auto
+            }
+            .sche-text{
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                .cal{
+                    float: left;
+                    width: 40%;
+                }
+
+            .cal th{
+                height: 42px;
+                font-weight: normal;
+                font-size: 12px;
+                font-family: 'Maven Pro', sans-serif;
+                color: #5e5e5d;
+                border-bottom: 1px solid #d3d3d3;
+            }
+            .cal th.sun{
+                color: #e71a5f;
+            }
+            .cal td{
+                position: relative;
+                width: 50px;
+                height: 40px;
+                border-right: 1px solid #d3d3d3;
+                border-bottom: 1px solid #d3d3d3;
+                vertical-align: top;
+                color: #858480;
+                font-size: 10px;
+                padding:3px 0 0 3px;
+            }
+            .cal td.sun{
+                border-left: 1px solid #d3d3d3;
+            }
+            .cal td div{padding: 3px 0 0 3px;}
+            .cal td a{
+                display: block;
+                height: 40px;
+                color: #e71a5f;
+                padding: 0;
+                margin: 0;
+            }
+            .cal td.sch_on{
+                padding: 3px 0 0 3px;
+                color: #e71a5f;
+                background: #ededed;
+            }
+            #sche-list{
+                float: right;
+                width: 55%;
+                padding-top: 20px;
+            }
+            #sche-list li{
+                margin: 20px;
+                display: block;
+                border-top: solid 1px #ccc;
+                font-size:12px;
+            }
+            .sche_icon_info{
+                margin: 20px 0 0;
+                float: right;
+                clear:both;
+            }
+            .sche_icon_info li{
+                float: left;
+                margin-right: 10px;
+                font-size:12px;
+                color: #6d6c6a;
+            }
+            .sche_icon_info p{
+                padding: 0;
+                font-size: 12px;
+                line-height: 14px;
+                float: left;
+                margin-left: 8px;
+            }
+            .sche_icon_info span{
+                display: block;
+                float: left;
+            }
+            .clear_fix{
+                clear:both;
+            }
+
+
+            /*content 끝*/
+
+
+            /*footer*/
+            .footer_1{width:100%; height:57px; position:fixed; left:0; bottom:0;}
+            .footer_2{width:100%; height:57px; padding:0 30px; box-sizing:border-box;  -webkit-box-sizing:border-box;  -moz-box-sizing:border-box;-o-box-sizing:border-box;}
+
+            .footer_left{width:115px; height:45px; float:left; position:relative; left:5%; margin:6px 0;}
+            .jyp_logo>img{width:100%;}
+
+
+            .footer_right{width: 210px;; height:33px; float:right; position:relative; margin:13px 0 14px;}
+            .SNS{
+                width:32px; height:33px; margin-right:5px; text-decoration:none; display:inline-block;
+                font-size: 20px;    color: #000;    background-color: #e4e4e4;   border-radius: 25%;
+            }
+            .insta{
+                background-image:url(images/insta.png);
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+            .twitter{
+                background-image:url(images/twitter_bird.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .facebook{
+                background-image:url(images/facebook.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .youtube{
+                background-image:url(images/youtube.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+            .cafe{
+                background-image:url(images/fans.png);
+                 background-repeat:no-repeat;
+                background-position:center;
+            }
+
+            /*footer 끝*/
+
+
+            @media screen and (max-width:786px){
+
+                /*header*/
+                .wrapper .header{
+                    height:55px; padding:0; background-color:#FFF;
+                }
+                .wrapper .header .mark a{
+                     padding:0; height:55px;
+                    transform:scale(0.7, 0.7)
+                }
+                .wrapper .header .mark a:hover{
+
+                    transform:scale(0.7, 0.7) rotateY(180deg);
+                }
+                .wrapper .header .nav button{
+                    display:block; width:180px; padding:16px 40px; border:0;
+                    color:#FFF; background-color:#08e9d1;
+                    text-decoration:none; font-size:15px; font-family: 'Oswald', sans-serif;
+                    cursor:pointer;
+                }
+                /*임시 시작*/
+                /*.wrapper .header .nav button:hover + ul{*/
+                /*    display:block;*/
+                /*}*/
+                /*임시끝*/
+
+                .wrapper .header .nav ul{
+                    display:none; position:absolute; background-color:rgba(255, 255, 255, 0.8);
+                }
+                .wrapper .header .nav ul li{
+                    line-height:55px; text-indent:16px; padding-right:10px; width:100%;
+                }
+                 .wrapper .header .nav li a:hover{
+                    border-left:4px #08e9d1 solid; color:#ffb0b0;
+                    border-top:0;
+                 }
+                /*header 끝*/
+
+
+
+
+                /*content 시작*/
+
+               #content{margin-top:55px;}
+               .schedule{
+                   transition:1s;
+                   -webkit-background-size:230px; background-size:230px;
+               }
+                .yearMonth h3{
+                    padding: 12px 0 10px 0;
+                    margin: 0;
+                    font-size: 13px;
+                }
+                .sche-text{
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                .cal{
+                    float: none;
+                    width: 100%;
+                }
+                #sche-list{
+                    float: none;
+                    width: 100%;
+                }
+                /*content end*/
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:57px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .SNS{
+                     background: #CCC;   color:#000;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                     background-repeat:no-repeat;
+                    background-position:center;
+                }
+                 /*footer end*/
+
+             }
+              @media screen and (max-width:479px){
+                /*header start*/
+                .wrapper .header{
+                    height:40px;
+                }
+                .wrapper .header .nav button{
+                    height:40px;
+                    padding:10px 40px;
+                    width:150px;
+                }
+
+                 .wrapper .header .nav ul li {
+                    line-height: 37px;
+                    text-indent: 6px;
+                    padding-right: 10px;
+                    font-size:14px;
+                }
+               .wrapper .logo{
+                    position:relative; margin:0 auto; top:10%;
+                    transform:scale(1, 1);
+                    width: 250px;
+                    height: 250px;
+                    background-size: 70%;
+                    transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    background-repeat:no-repeat;
+                    background-position: center;
+                }
+                .wrapper .header .mark a{
+                    width: 60px;
+                    height: 30px;
+                    padding: 0;
+                    background-position: center;
+                    background-size: cover;
+                    margin: 3px 0 0 10px;
+                    transform:scale(1 , 1);
+                }
+                 .wrapper .header .mark a:hover{
+                    transform:scale(1, 1) rotateY(180deg);
+                }
+                /*header end*/
+                /*content start*/
+                #content {
+                    margin-top: 40px;
+                }
+                .schedule {
+                    height: 50px;
+                    padding:0;
+                    background-size: 45%;
+                }
+                .yearMonth h3{ line-height: 40px; font-size: 17px;     padding-top: 0;}
+
+
+
+                /*footer start*/
+                .footer_1{
+                    width:100%;
+                    height:37px;
+                    background-color:rgba(0,0,0,0.7);
+                }
+                .footer_right {
+                    width: 138px;
+                    height: 33px;
+                    float: right;
+                    position: relative;
+                    right:0;
+                    margin: 9px 0 14px;
+                }
+                .SNS{
+                     width:23px; height:23px; margin-right:0px; text-decoration:none; display:inline-block;
+                     font-size: 14px;    color: #000;    background: #FFF;    border-radius: 25%;
+                     background: #CCC;   color:#000;
+                     background-size:95%;
+                     background-repeat:no-repeat;
+                     background-position:center;
+                }
+                .insta{
+                    background-image:url(images/insta.png);
+                }
+                .twitter{
+                    background-image:url(images/twitter_bird.png);
+                }
+                .facebook{
+                    background-image:url(images/facebook.png);
+                }
+                .youtube{
+                    background-image:url(images/youtube.png);
+                }
+                .cafe{
+                    background-image:url(images/fans.png);
+                }
+                .footer_left{
+                    width: 67px;
+                    height: 45px;
+                    float: left;
+                    position: relative;
+                    left: 0%;
+                    margin: 8px 0;
+
+                }
+            }
+
+
+
+        </style>
+
+
+
+
+        <script>
+            $(function(){
+                $('.nav>button').click(function(){
+                    $(this).next('ul').slideToggle(1000)
+                })
+
+                $(window).resize(function(){
+                    if($(this).width() < 768){
+                        $('.nav ul').css('display','none');
+                    }else if($(this).width()>767){
+                        $('.nav ul').css('display','block')
+                    }
+                })
+
+
+            //달력만들기
+                var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                var date = new Date();
+                var currentYear = date.getFullYear();
+                    //년도를 구함
+                var currentMonth = date.getMonth() + 1;
+                    //월을 구함. 월은 0부터 시작하므로 +1, 12월은 11을 출력
+                var currentDate = date.getDate();
+                    //오늘 일자.
+                    date.setDate(1);
+                var currentDay = date.getDay();
+                    //이번달 1일의 요일은 출력. 0은 일요일 6은 토요일
+
+                    // id에 달력 집어 넣음, date는 현재 년 월 일 ex.2015-3-27
+                function kCalendar(id, date) {
+                    var kCalendar = document.getElementById(id);
+
+                    if( typeof( date ) !== 'undefined' ) {
+                        date = date.split('-');
+                        date[1] = date[1] - 1;
+                        date = new Date(date[0], date[1], date[2]);
+
+                        currentYear = date.getFullYear();
+                            //년도를 구함
+                        currentMonth = date.getMonth() + 1;
+                            //월을 구함. 월은 0부터 시작하므로 +1, 12월은 11을 출력
+                        currentDate = date.getDate();
+                            //오늘 일자.
+                            date.setDate(1);
+                        currentDay = date.getDay();
+                        //이번달 1일의 요일은 출력. 0은 일요일 6은 토요일
+                    }
+                    var dateString = new Array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
+                    var lastDate = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+                    if( (currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0 )
+                    lastDate[1] = 29;
+                    //각 달의 마지막 일을 계산, 윤년의 경우 년도가 4의 배수이고 100의 배수가 아닐 때 혹은 400의 배수일 때 2월달이 29일 임.
+
+                    var currentLastDate = lastDate[currentMonth-1];
+                    var week = Math.ceil( ( currentDay + currentLastDate ) / 7 );
+                    //총 몇 주인지 구함.
+
+                    var calendar = '';
+
+                    $('.yearMonth h3').text(currentYear+'.'+currentMonth);
+
+                    var dateNum = 1 - currentDay;
+                    for(var i = 0; i < week; i++) {
+                        calendar += '<tr>';
+                            for(var j = 0; j < 7; j++, dateNum++) {
+                                    if( dateNum < 1 || dateNum > currentLastDate ) {
+                                        calendar += '<td class="' + dateString[j] + '"> </td>';
+                                        continue;
+                                    }
+                                calendar += '<td class="' + dateString[j] + '">' + dateNum + '</td>';
+                            }
+                        calendar += '</tr>';
+                    }
+
+                    kCalendar.innerHTML = calendar;
+                    }
+            $(function(){
+
+                //버튼 클릭 함수
+                var btnClick = function(plus){
+
+                    $('#input').children('tr').remove();
+                    $('#sche-list').children('li').remove();
+
+                    var year, month;
+                    year = currentYear;
+
+                    if(plus == 1) {
+                        if( currentMonth == 12){
+                            year = currentYear + plus;
+                            month = 1;
+                        }else month = Number(currentMonth) + plus;
+                    }else{
+                        if( currentMonth == 1){
+                            year = currentYear + plus;
+                            month = 12;
+                        }else month = Number(currentMonth) + plus;
+                    }
+
+                    kCalendar('input',year+'-'+month+'-'+currentDate);
+
+                    $.getJSON("schedule.json", function(e){
+                        for(var i in e.schedule){
+                            if(month == e.schedule[i].month && currentYear  == e.schedule[i].year){
+
+                                for(var j in $('.cal td').length){
+                                    if(e.schedule[i].date == $('.cal td').eq(j).text() ){
+                                        console.log($('.cal td').eq(j).text())
+                                    }
+                                }
+                                var insert ='<li><strong>'+e.schedule[i].date+' '+day[e.schedule[i].day]+'</strong><p class="sche-text"><img style="vertical-align:middle;" src="images/sch_icon_'+e.schedule[i].class+'.gif">'+e.schedule[i].body+'</p></li>';
+                                $('#sche-list').append(insert);
+                            }
+
+                        }
+                    });
+                }
+                //달력생성
+                btnClick(0);
+
+                //이전달 click
+                $('.btn.pm').click(function(){
+                    btnClick(-1);
+                })
+                //다음달 click
+                $('.btn.nm').click(function(){
+                    btnClick(1);
+                })
+
+            })
+
+
+
+            })
+
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <div class="header">
+                <div class="mark">
+                    <a href="index.html"></a>
+                </div>
+                <div class="nav">
+                    <button>Main Menu</button>
+                    <ul>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="discography.html">DISCOGRAPHY</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="video.html">VIDEO</a>
+                        </li>
+                        <li>
+                            <a href="notice.html">NOTICE</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html">SCHEDULE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div id="content">
+                <div class="schedule"></div>
+
+                <div class="contents">
+                    <div class="sect-main">
+                        <div class="full_box">
+                            <div class="sche_wrap">
+
+                                <div class="yearMonth">
+                                    <h3>2016.9</h3>
+                                    <span class="btn pm"><a ><img src="images/btn_paging_prev.gif" alt="이전달"></a></span>
+                                    <span class="btn nm"><a ><img src="images/btn_paging_next.gif" alt="다음달"></a></span>
+                                </div>
+                                <div class="cal_sche">
+                                    <table class="cal" cellspacing="0">
+                                    <colgroup>
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                        <th scope="col" class="sun">SUN</th>
+                                        <th scope="col">MON</th>
+                                        <th scope="col">TUE</th>
+                                        <th scope="col">WED</th>
+                                        <th scope="col">THU</th>
+                                        <th scope="col">FRI</th>
+                                        <th scope="col">SAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="input">
+
+
+
+                                    </tbody>
+                                </table>
+
+                                    <div id="sche-list">
+                                    <ul>
+                                    </ul>
+                                </div>
+                                    <div class="sche_icon_info">
+                                    <ul>
+                                        <li><span><img src="images/sch_icon_t.gif" alt="TV"></span><p>TV</p></li>
+                                        <li><span><img src="images/sch_icon_m.gif" alt="Magazine"></span><p>Magazine</p></li>
+                                        <li><span><img src="images/sch_icon_r.gif" alt="Radio"></span><p>Radio</p></li>
+                                        <li><span><img src="images/sch_icon_c.gif" alt="Concert"></span><p>Concert</p></li>
+                                        <li><span><img src="images/sch_icon_e.gif" alt="ETC"></span><p>ETC</p></li>
+                                    </ul>
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="clear_fix"></div>
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="footer_1">
+                <div class="footer_2">
+                    <span class="footer_left">
+                        <a href="http://www.jype.com/" class="jyp_logo">
+                            <img src="images/jyplogo-b.png" alt="제이와이피엔터테이먼트로고" />
+                        </a>
+                    </span>
+
+                    <span class="footer_right">
+                        <a href="https://www.instagram.com/twicetagram/" class="SNS insta">
+                        </a>
+                        <a href="https://twitter.com/JYPETWICE" class="SNS twitter">
+                        </a>
+                        <a href="https://www.facebook.com/JYPETWICE" class="SNS facebook">
+                        </a>
+                        <a href="https://www.youtube.com/c/jypentertainment" class="SNS youtube">
+                        </a>
+                        <a href="http://fans.jype.com/Portal" class="SNS cafe">
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

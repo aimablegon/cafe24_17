@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KOITA GLOBAL</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <link rel="stylesheet" href="/koita/mobile/lib/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/font/flaticon.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/css/common.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/koita/mobile/lib/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="/koita/mobile/lib/js/script.js"></script>
+</head>
+<style type="text/css">
+#apply_confrim .alert {
+  text-align: justify;
+}
+#apply_confrim h4 {
+  display: inline-block;
+}
+#apply_confrim .h4_mt {margin-top: 30px;}
+#apply_confrim .list-infomation li{border-bottom:1px #CCC dotted;padding:5px 0;}
+#apply_confrim .list-infomation li:last-child{border-bottom:1px #000 solid;}
+#apply_confrim .list-infomation li span{display: block}
+#apply_confrim .list-infomation li span:first-child{font-weight:bold}
+#apply_confrim .btn_apply{margin:15px 5px; width:40%; display: inline-block;}
+
+</style>
+<body>
+
+
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/koita/mobile/html/main/main.html"><img src="/koita/mobile/lib/images/logo.jpg" alt=""></a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li class="dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">마이페이지 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">등록내역</a></li>
+                              <li><a href="/koita/mobile/html/mypage/apply_confirm.html">참가자현황</a></li>
+                              <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">행사안내 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/event_info/invitation.html">초청글</a></li>
+                              <li><a href="/koita/mobile/html/event_info/event_info.html">행사개요</a></li>
+                              <li><a href="/koita/mobile/html/event_info/location.html">위치 및 교통편</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">프로그램 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/program/2016_program.html">2016 Program</a></li>
+                              <li><a href="/koita/mobile/html/program/2016_speaker.html">2016 Speaker</a></li>
+                              <li><a href="/koita/mobile/html/program/koita2014.html">지난행사</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">참가등록 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/apply/apply_info.html">참가신청안내</a></li>
+                              <li><a href="/koita/mobile/html/apply/apply.html">참가신청</a></li>
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">참가신청확인</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                      <li><a href="/koita/mobile/html/notice/list.html?Board_id=notice_kor_2016">공지사항</a></li>
+                      <li class="list-line"><a href="/koita/mobile/html/contact/contact.html">연락처</a></li>
+                      <li><a href="/koita/mobile/html/login/doLogout.html" class="flaticon-sign-in-1">로그아웃</a></li>
+                      <li><a href="/koita/mobile/html/login/login.html" class="flaticon-sign-in">로그인</a></li>
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+<div class="container-fluid" id="apply_confrim">
+    <h2 class="headding"><span>참가등록</span></h2>
+    <h4 class="strongElement"><span>기본정보</span></h4>
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <p>“KOITA 글로벌 포럼 2016”에서는 참가자간 네트워킹 구축과 교류증진을 위해 참가신청자 명단을 등록자에 한해 공개, 열람할 수 있도록 하고 있습니다.
+          * 공개 기본정보: 이메일, 성명, 소속, 직급
+      </p>
+    </div>
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <p>
+        참가신청자 명단은 참가등록 완료 후 ‘참가신청 확인’에서 로그인하시면 확인 및 검색하실 수 있습니다.
+      </p>
+    </div>
+    <div class="list-infomation">
+        <ul>
+          <li class="col-xs-6">
+              <span>구분</span>
+              <span>회원사/비회원사</span>
+          </li>
+          <li class="col-xs-6">
+              <span>소속 회사</span>
+              <span>가나다</span>
+          </li>
+          <li class="col-xs-6">
+              <span>성명</span>
+              <span>홍길동</span>
+          </li>
+          <li class="col-xs-6">
+                <span>직급</span>
+                <span>대리</span>
+          </li>
+          <li class="col-xs-12">
+                <span>아이디</span>
+                <span>abcd</span>
+          </li>
+          <li class="col-xs-12">
+                <span>휴대폰번호</span>
+                <span>010-1234-5678</span>
+          </li>
+        </ul>
+    </div>
+    <h4 class="strongElement h4_mt"><span>등록비 결제(비회원사)</span></h4>
+    <div class="list-infomation">
+        <ul>
+          <li class="col-xs-6">
+              <span>입금자명</span>
+              <span>홍길동</span>
+          </li>
+          <li class="col-xs-6">
+              <span>계산서 발행여부</span>
+              <span>발행/미발행</span>
+          </li>
+          <li class="col-xs-12">
+              <span>납부방법</span>
+              <span>계좌송금 -
+                  우리은행(1006-001-244685)
+                  <br />
+                  예금주 : (사)한국산업기술진흥협회)
+                  <br />
+                  * 참가자 성명과 입금자명이 다른 경우 반드시 사무국으로 연락해 주시기 바랍니다.
+                  <br />한국산업기술진흥협회
+                  <br />
+                  TEL : 02-3460-9065
+                  <br />
+                  EMAIL : showguy@koita.or.kr
+              </span>
+          </li>
+          <li class="col-xs-12">
+              <span>납부금액</span>
+              <span>200,000원</span>
+          </li>
+          <li class="col-xs-12">
+                <span>사업자 등록증</span>
+                <span></span>
+          </li>
+        </ul>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-default btn_apply" onclick="document.frm.action='non-memnber.html';document.frm.submit();">이전</button>
+        <button type="button" class="btn btn-primary btn_apply" onclick="document.frm.submit();">전송</button>
+    </div>
+
+
+
+
+<form method="post"  name="frm" id="frm" action="registApply.html">
+
+
+<input type="hidden" name="Reg_idx"  value="<%=Reg_idx%>">
+<input type="hidden" name="Reg_Wdate"  value="<%=Reg_Wdate%>">
+<input type="hidden" name="Reg_Edate"  value="<%=Reg_Edate%>">
+<input type="hidden" name="Reg_Type"  value="<%=Reg_Type%>">
+<input type="hidden" name="System_IPAdr"  value="<%=System_IPAdr%>">
+<input type="hidden" name="System_Info"  value="<%=System_Info %>">
+<input type="hidden" name="ViewSN"  value="<%=ViewSN%>">
+<input type="hidden" name="Reg_PType"  value="<%=Reg_PType%>">
+<input type="hidden" name="Reg_Title"  value="<%=Reg_Title%>">
+<input type="hidden" name="Reg_Title_Etc"  value="<%=Reg_Title_Etc%>">
+<input type="hidden" name="Reg_Gender"  value="<%=Reg_Gender%>">
+<input type="hidden" name="Reg_Country_Select"  value="<%=Reg_Country_Select%>">
+<input type="hidden" name="Reg_Country"  value="<%=Reg_Country%>">
+<input type="hidden" name="Reg_Email"  value="<%=Reg_Email%>">
+<input type="hidden" name="Reg_PW"  value="<%=Reg_PW%>">
+<input type="hidden" name="Reg_PW_ck"  value="<%=Reg_PW_ck%>">
+<input type="hidden" name="Reg_Kname"  value="<%=Reg_Kname%>">
+<input type="hidden" name="Reg_Lname"  value="<%=Reg_Lname%>">
+<input type="hidden" name="Reg_Mname"  value="<%=Reg_Mname%>">
+<input type="hidden" name="Reg_Fname"  value="<%=Reg_Fname%>">
+<input type="hidden" name="Reg_Name"  value="<%=Reg_Name%>">
+<input type="hidden" name="Reg_Affiliation"  value="<%=Reg_Affiliation%>">
+<input type="hidden" name="Reg_AffiliationK"  value="<%=Reg_AffiliationK%>">
+<input type="hidden" name="Reg_Position"  value="<%=Reg_Position%>">
+<input type="hidden" name="Reg_PositionK"  value="<%=Reg_PositionK%>">
+<input type="hidden" name="Reg_Address_01"  value="<%=Reg_Address_01%>">
+<input type="hidden" name="Reg_Address_02"  value="<%=Reg_Address_02%>">
+<input type="hidden" name="Reg_Address_03"  value="<%=Reg_Address_03%>">
+<input type="hidden" name="Reg_Address_04"  value="<%=Reg_Address_04%>">
+<input type="hidden" name="Reg_Mobile1"  value="<%=Reg_Mobile1%>">
+<input type="hidden" name="Reg_Mobile2"  value="<%=Reg_Mobile2%>">
+<input type="hidden" name="Reg_Mobile3"  value="<%=Reg_Mobile3%>">
+<input type="hidden" name="Reg_Mobile4"  value="<%=Reg_Mobile4%>">
+<input type="hidden" name="Reg_Tel1"  value="<%=Reg_Tel1%>">
+<input type="hidden" name="Reg_Tel2"  value="<%=Reg_Tel2%>">
+<input type="hidden" name="Reg_Tel3"  value="<%=Reg_Tel3%>">
+<input type="hidden" name="Reg_Tel4"  value="<%=Reg_Tel4%>">
+<input type="hidden" name="Reg_Fax1"  value="<%=Reg_Fax1%>">
+<input type="hidden" name="Reg_Fax2"  value="<%=Reg_Fax2%>">
+<input type="hidden" name="Reg_Fax3"  value="<%=Reg_Fax3%>">
+<input type="hidden" name="Reg_Fax4"  value="<%=Reg_Fax4%>">
+<input type="hidden" name="Reg_Kname_Velue"  value="<%=Reg_Kname_Velue%>">
+<input type="hidden" name="Reg_Email_Velue"  value="<%=Reg_Email_Velue%>">
+<input type="hidden" name="Reg_Affiliation_Velue"  value="<%=Reg_Affiliation_Velue%>">
+<input type="hidden" name="Reg_Position_Velue"  value="<%=Reg_Position_Velue%>">
+<input type="hidden" name="Reg_PayTotal"  value="<%=Reg_PayTotal%>">
+<input type="hidden" name="Reg_PayBankName"  value="<%=Reg_PayBankName%>">
+<input type="hidden" name="Reg_PayTexV"  value="<%=Reg_PayTexV%>">
+<input type="hidden" name="Reg_PP_File1"  value="<%=Reg_PP_File1%>">
+<input type="hidden" name="Reg_PP_File2"  value="<%=Reg_PP_File2%>">
+<input type="hidden" name="Program1"  value="<%=Program1%>">
+<input type="hidden" name="Program2"  value="<%=Program2%>">
+<input type="hidden" name="Program3"  value="<%=Program3%>">
+<input type="hidden" name="Program4"  value="<%=Program4%>">
+<input type="hidden" name="Program5"  value="<%=Program5%>">
+<input type="hidden" name="Program6"  value="<%=Program6%>">
+<input type="hidden" name="Program7"  value="<%=Program7%>">
+<input type="hidden" name="Program8"  value="<%=Program8%>">
+<input type="hidden" name="Program9"  value="<%=Program9%>">
+<input type="hidden" name="Program10"  value="<%=Program10%>">
+<input type="hidden" name="Program11"  value="<%=Program11%>">
+<input type="hidden" name="Program12"  value="<%=Program12%>">
+<input type="hidden" name="Program13"  value="<%=Program13%>">
+<input type="hidden" name="Program14"  value="<%=Program14%>">
+<input type="hidden" name="Program15"  value="<%=Program15%>">
+<input type="hidden" name="Reg_ETC1"  value="<%=Reg_ETC1 %>">
+<input type="hidden" name="Reg_ETC2"  value="<%=Reg_ETC2 %>">
+<input type="hidden" name="Reg_ETC3"  value="<%=Reg_ETC3%>">
+<input type="hidden" name="Reg_ETC4"  value="<%=Reg_ETC4 %>">
+<input type="hidden" name="Reg_ETC5"  value="<%=Reg_ETC5%>">
+<input type="hidden" name="Admin_Note1"  value="<%=Admin_Note1 %>">
+<input type="hidden" name="Admin_Note2"  value="<%=Admin_Note2 %>">
+<input type="hidden" name="Admin_Note3"  value="<%=Admin_Note3 %>">
+<input type="hidden" name="Admin_Note4"  value="<%=Admin_Note4 %>">
+<input type="hidden" name="Admin_Note5"  value="<%=Admin_Note5%>">
+
+
+</FORM>
+
+
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="address">
+            <ul class="row">
+                <li class="text-center">
+                    <div class="titler_img"><img src="/koita/mobile/lib/images/footer_title1.png" alt="KOITA Global Forum 2016 사무국"></div>
+                    <ul class="call-list row">
+                        <li class="col-xs-12">
+                            <i class="flaticon-phone-receiver col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>TEL:</span><a href="tel:0269593205" class="orange">02.6959.3205</a></span>
+                            </div>
+                        </li>
+                        <li class="col-xs-12" style="margin:0;">
+                            <i class="flaticon-web col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>EMAIL:</span><a href="mailto:koitagf2016@dip.kr" class="orange">koitagf2016@dip.kr</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/koita/mobile/lib/bootsdtap-3.3.2-dist/js/bootsdtap.min.js"></script>
+<scropt src="/koita/mobile/lib/js/script.js"></scropt>
+
+</body>
+</html>

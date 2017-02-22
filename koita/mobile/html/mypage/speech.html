@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>KOITA GLOBAL</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <link rel="stylesheet" href="/koita/mobile/lib/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/font/flaticon.css" />
+    <link rel="stylesheet" href="/koita/mobile/lib/css/common.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/koita/mobile/lib/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="/koita/mobile/lib/js/script.js"></script>
+
+
+</head>
+<style type="text/css">
+ul,li{
+  list-style: none;
+}
+#speech textarea {
+  width:100%;
+  margin:20px 0;
+}
+#speech h4{
+  margin-top: 30px;
+}
+#speech .panel {
+  border-top: 1px #000 solid;
+  border-bottom: 1px #000 solid;
+}
+#speech .btn-group button {
+    overflow:hidden;
+}
+#speech .btn-group button .caret {
+    position:absolute;
+    top:12px;
+    right:10px;
+}
+#speech .btn-group {
+    width:100%;
+}
+#speech .btn-group button {
+    width:100%;
+    text-align:left;
+}
+#speech .dropdown-menu {
+    width:100%;
+    overflow: hidden;
+}
+#speech .dropdown-menu>li>a {
+    padding: 3px 9px;
+}
+</style>
+<body>
+
+
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/koita/mobile/html/main/main.html"><img src="/koita/mobile/lib/images/logo.jpg" alt=""></a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li class="dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">마이페이지 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">등록내역</a></li>
+                              <li><a href="/koita/mobile/html/mypage/apply_confirm.html">참가자현황</a></li>
+                              <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">행사안내 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/event_info/invitation.html">초청글</a></li>
+                              <li><a href="/koita/mobile/html/event_info/event_info.html">행사개요</a></li>
+                              <li><a href="/koita/mobile/html/event_info/location.html">위치 및 교통편</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">프로그램 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/program/2016_program.html">2016 Program</a></li>
+                              <li><a href="/koita/mobile/html/program/2016_speaker.html">2016 Speaker</a></li>
+                              <li><a href="/koita/mobile/html/program/koita2014.html">지난행사</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">참가등록 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="/koita/mobile/html/apply/apply_info.html">참가신청안내</a></li>
+                              <li><a href="/koita/mobile/html/apply/apply.html">참가신청</a></li>
+                              <li><a href="/koita/mobile/html/mypage/infomation.html">참가신청확인</a></li>
+                              <li class="divider"></li>
+                          </ul>
+                      </li>
+                      <li><a href="/koita/mobile/html/mypage/speech.html">연사에게 질문하기</a></li>
+                      <li><a href="/koita/mobile/html/notice/list.html?Board_id=notice_kor_2016">공지사항</a></li>
+                      <li class="list-line"><a href="/koita/mobile/html/contact/contact.html">연락처</a></li>
+                      <li><a href="/koita/mobile/html/login/doLogout.html" class="flaticon-sign-in-1">로그아웃</a></li>
+                      <li><a href="/koita/mobile/html/login/login.html" class="flaticon-sign-in">로그인</a></li>
+                  </ul>
+
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+
+<!-- 여백이없는 컨테이너 사용시 container-fluid 클레스사용 -->
+<div class="container-fluid" id="speech">
+  <!-- content -->
+
+
+    <!-- 제목 -->
+    <h2 class="headding"><span>연사에게 질문하기</span></h2>
+
+
+
+    <h4 class="strongElement"><span>질문하기 작성</span></h4>
+	<form method="post"  name="frm" id="frm" action="doSpeech.html" >
+	<input name="Qna_CompanyIdx"  type="hidden" id="Qna_CompanyIdx" value="" >
+    <div class="btn-group select_tg">
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <span class="person select_con">Sanjeev Gandhi | 바스프(BASF)<br /> 아시아 지역 총괄 대표</a></span> <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a>Martin G. Curley | Maynooth University 교수</a></li>
+            <li><a>Sanjeev Gandhi | 바스프(BASF)<br /> 아시아 지역 총괄 대표</a></li>
+            <li><a>Jim Rusk | 지멘스(SIEMENS)<br /> 수석부사장 겸 CTO</a></li>
+            <li><a>Frank Schaefers | 보쉬(Bosch)<br /> 한국법인 대표이사</a></li>
+            <li><a>Andre Nothomb | 솔베이(SOLVAY)<br /> 아태지역본부 대표</a></li>
+            <li><a>Naoto Yanagihara | 후지필름(FUJIFILM)<br /> 혁신전략 부사장</a></li>
+            <li><a>Semyon Kogan | GEN5 GROUP 대표이사</a></li>
+          </ul>
+
+          <select name="Qna_SPK" id="Qna_SPK" style="width:100%" class="ref">
+              <option value="Martin G. Curley">Martin G. Curley | Maynooth University 교수</option>
+              <option value="Sanjeev Gandhi" >Sanjeev Gandhi | 바스프(BASF) 아시아 지역 총괄 대표</option>
+              <option value="Jim Rusk" >Jim Rusk | 지멘스(SIEMENS) 수석부사장 겸 CTO</option>
+              <option value="Frank Schaefers" >Frank Schaefers | 보쉬(Bosch) 한국법인 대표이사</option>
+              <option value="Andre Nothomb" >Andre Nothomb | 솔베이(SOLVAY) 아태지역본부 대표</option>
+              <option value="Naoto Yanagihara" >Naoto Yanagihara | 후지필름(FUJIFILM) 혁신전략 부사장</option>
+              <option value="Semyon Kogan" >Semyon Kogan | GEN5 GROUP 대표이사</option>
+        </select>
+
+    </div>
+
+
+    <textarea name="Qna_Note" id="Qna_Note" class="form-control" rows="10" required="required" placeholder="성함, 소속, 직급을 반드시 작성해주세요."></textarea>
+
+    <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">전송</button>
+    </div>
+    </form>
+    <h4 class="strongElement"><span>질문내역</span></h4>
+
+    <div class="panel panel-default row">
+      <ul>
+        <li>
+          <span class="panel-body col-xs-12"></span>
+          <span class="panel-footer col-xs-12"></span>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="first-tap">
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="infomation.html">등록내역</a></li>
+            <li><a href="apply_confirm.html">참가자현황</a></li>
+            <li class="active"><a href="speech.html">연사에게 질문하기</a></li>
+        </ul>
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+    alert('성함, 소속, 직급을 반드시 작성해주세요.')
+		$("#frm").submit(function () {
+
+			if($("#Qna_SPK").val() == "") {
+				alert("연사를 선택하시기 바랍니다.");
+				$("#Qna_SPK").focus();
+				return false;
+			}
+			if($("#Qna_Note").val() == "") {
+				alert("질문내용을 입력하시기 바랍니다.");
+				$("#Qna_Note").focus();
+				return false;
+			}
+
+			if(confirm("입력된 내용을 전송하시겠습니까?") == false) {
+				return false;
+			}
+
+
+
+		});
+	});
+</script>
+
+<!-- footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="address">
+            <ul class="row">
+                <li class="text-center">
+                    <div class="titler_img"><img src="/koita/mobile/lib/images/footer_title1.png" alt="KOITA Global Forum 2016 사무국"></div>
+                    <ul class="call-list row">
+                        <li class="col-xs-12">
+                            <i class="flaticon-phone-receiver col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>TEL:</span><a href="tel:0269593205" class="orange">02.6959.3205</a></span>
+                            </div>
+                        </li>
+                        <li class="col-xs-12" style="margin:0;">
+                            <i class="flaticon-web col-xs-2"></i>
+                            <div class="col-xs-10 text-left">
+                                <span><span>EMAIL:</span><a href="mailto:koitagf2016@dip.kr" class="orange">koitagf2016@dip.kr</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- content end -->
+
+
+
+
+</body>
+</html>
